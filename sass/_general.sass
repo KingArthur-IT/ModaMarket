@@ -1,4 +1,4 @@
-$primary: #FD6D32
+$primary: #222222
   
 *,
 *::before,
@@ -12,93 +12,79 @@ $primary: #FD6D32
 ul
   list-style: none
 a, a:visited
-    text-decoration: none
-    color: #fff
-
+  text-decoration: none
+  color: $primary
 
 body
   line-height: 1.7
-  font-family: 'Montserrat', sans-serif
+  font-family: 'Open Sans', sans-serif
   text-rendering: optimizeLegibility
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
-  background-color: #0A0011
+  background-color: #fff
   overflow-x: hidden
+  color: $primary
 
-.container
-    margin: 0 auto
-    padding: 0 30px
-    max-width: 1260px
+// .container
+//     margin: 0 auto
+//     padding: 0 30px
+//     // max-width: 1260px
 .section
     width: 100%
     position: relative
-.btn
-    font-family: 'Montserrat', sans-serif
-    appearance: none
-    border: none
-    display: block
-    cursor: pointer
-    background: linear-gradient(87.55deg, #EF4E1C 0%, #FF6D40 95.72%)
-    box-shadow: 0px 4px 113px rgba(241, 82, 32, 0.82), inset 0px 0px 31px #FF966B
-    border-radius: 12px
-    font-size: 21px
-    line-height: 176%
-    font-weight: 700
-    text-align: center
-    display: flex
-    align-items: center
-    justify-content: center
-    letter-spacing: 0.095em
-    text-transform: uppercase
-    color: #fff
-    padding: 30px
-    transition: box-shadow .3s ease-in-out
-    max-width: 390px
-    &:hover
-      box-shadow: 0px 4px 73px rgba(241, 82, 32, 0.82), inset 0px 0px 31px #FF966B
-.text
-  font-weight: 400
-  font-size: 18px
-  line-height: 176%
+// .btn
+//     font-family: 'Open Sans', sans-serif
+//     appearance: none
+//     border: none
+//     display: block
+    // cursor: pointer
+//     background: linear-gradient(87.55deg, #EF4E1C 0%, #FF6D40 95.72%)
+//     box-shadow: 0px 4px 113px rgba(241, 82, 32, 0.82), inset 0px 0px 31px #FF966B
+//     border-radius: 12px
+//     font-size: 21px
+//     line-height: 176%
+//     font-weight: 700
+//     text-align: center
+//     display: flex
+//     align-items: center
+//     justify-content: center
+//     letter-spacing: 0.095em
+//     text-transform: uppercase
+//     color: #fff
+//     padding: 30px
+//     transition: box-shadow .3s ease-in-out
+//     max-width: 390px
+//     &:hover
+//       box-shadow: 0px 4px 73px rgba(241, 82, 32, 0.82), inset 0px 0px 31px #FF966B
+// .text
+//   font-weight: 400
+//   font-size: 18px
+//   line-height: 176%
 
-.title
-  font-family: 'Intro Black'
-  font-style: normal
-  font-weight: 900
-  line-height: 110%
-  font-size: 66px
+// // .title
+// //   font-family: 'Intro Black'
+// //   font-style: normal
+// //   font-weight: 900
+// //   line-height: 110%
+// //   font-size: 66px
 
-.d-none
-  display: none !important
-.no-events
-  pointer-events: none
-.overflow-hidden
-  overflow: hidden
+// .d-none
+//   display: none !important
+// .no-events
+//   pointer-events: none
+// .overflow-hidden
+//   overflow: hidden
 
-@media screen and (max-width: 1024px)
-  .title
-      font-size: 58px
-@media screen and (max-width: 768px)
-  .btn
-    font-size: 18px
-    max-width: 340px
-  .title
-      font-size: 48px
-@media screen and (max-width: 600px)
-  .text
-    font-size: 16px
-  body
-    font-size: 16px
-@media screen and (max-width: 425px)
-  .container
-    padding: 0 20px
-  .btn
-    font-size: 16px
-    padding: 23px
-    max-width: 295px
-  .title
-    font-size: 37px
-  .text
-    font-size: 14px
-  body
-    font-size: 14px
+// @media screen and (max-width: 425px)
+//   .container
+//     padding: 0 20px
+//   .btn
+//     font-size: 16px
+//     padding: 23px
+//     max-width: 295px
+//   .title
+//     font-size: 37px
+//   .text
+//     font-size: 14px
+//   body
+//     font-size: 14px

@@ -1,0 +1,115 @@
+.header
+  &__top
+    background-color: $primary
+  &__phone
+    cursor: pointer
+    & svg
+      width: 18px
+    & span
+      color: #fff
+      transition: color .3s ease
+    &:hover 
+      & svg
+        animation: shake 0.8s cubic-bezier(.36,.07,.19,.97) both
+        & path
+          stroke: darken(#fff, 15%)
+      & span
+        color: darken(#fff, 15%)
+  &__city
+    cursor: pointer
+    & svg
+      width: 18px
+    & span
+      color: #fff
+      transition: color .3s ease
+    &:hover 
+      & svg 
+        animation: jump 0.8s cubic-bezier(.36,.07,.19,.97) both
+        & path
+          stroke: darken(#fff, 15%)
+      & span
+        color: darken(#fff, 15%)
+  &__hero
+  &__tabs
+    flex-basis: 40%
+  &__tab
+    position: relative
+    color: #000
+    font-weight: 700
+    border-bottom: 2px solid transparent
+    transition: border .3s ease
+    &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      right: 0
+      width: 100%
+      background-color: $primary
+      height: 2px
+      transform: scale(0)
+      transform-origin: right
+      transition: transform .3s ease
+    &:hover::after
+      transform: scale(1)
+    &.active::after
+      transform: scale(1)
+  &__logo
+    font-family: 'Oswald', sans-serif
+    font-size: 48px
+    font-weight: 700
+    flex-basis: 20%
+  &__right
+    flex-basis: 40%
+  &__basket
+    cursor: pointer
+    position: relative
+    
+
+.basket
+  & svg
+    width: 50px
+    height: 50px
+    display: block
+    & path
+      transition: all .3s ease
+  &:hover
+    & svg
+      & .basket__fill 
+        fill: $primary
+  &__num
+    position: absolute
+    width: 20px
+    height: 20px
+    top: 0
+    right: 0
+    border-radius: 50%
+    background: $primary
+    color: #fff
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 14px
+    font-weight: 600
+
+
+
+
+@keyframes shake
+  10%, 90%
+    transform: rotate(-5deg)
+  20%, 80%
+    transform: rotate(10deg)
+  30%, 50%, 70%
+    transform: rotate(-20deg)
+  40%, 60%
+    transform: rotate(20deg)
+
+@keyframes jump
+  15%
+    transform: translateY(-2px)
+  40%
+    transform: translateY(0px)
+  60%
+    transform: translateY(-3px)
+  90%
+    transform: translateY(0px)
