@@ -64,11 +64,11 @@ body {
 }
 
 .header__phone:hover svg path {
-  stroke: #d9d9d9;
+  stroke: #bfbfbf;
 }
 
 .header__phone:hover span {
-  color: #d9d9d9;
+  color: #bfbfbf;
 }
 
 .header__city {
@@ -91,11 +91,11 @@ body {
 }
 
 .header__city:hover svg path {
-  stroke: #d9d9d9;
+  stroke: #bfbfbf;
 }
 
 .header__city:hover span {
-  color: #d9d9d9;
+  color: #bfbfbf;
 }
 
 .header__tabs {
@@ -277,7 +277,7 @@ body {
 }
 
 .head-nav__item:hover {
-  color: #484848;
+  color: #626262;
 }
 
 .head-nav__col {
@@ -313,7 +313,7 @@ body {
 }
 
 .head-nav__content-head:hover {
-  color: #484848;
+  color: #626262;
 }
 
 .head-nav__content-item {
@@ -325,7 +325,7 @@ body {
 }
 
 .head-nav__content-item:hover {
-  color: #484848;
+  color: #626262;
 }
 
 .head-nav__hero {
@@ -394,6 +394,10 @@ body {
   display: inline;
 }
 
+.slider__card .price__old.overlined {
+  font-size: 14px;
+}
+
 .slider__card .price__old.overlined span {
   text-decoration: line-through;
 }
@@ -445,14 +449,18 @@ body {
   position: absolute;
   top: 5px;
   right: 5px;
-  width: 30px;
-  height: 30px;
-  -webkit-transition: fill .3s ease;
-  transition: fill .3s ease;
+  width: 25px;
+  height: 25px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .slider__favourite:hover {
   fill: red;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .slider__label {
@@ -530,6 +538,53 @@ body {
 
 .baner__arrow.arrow-right {
   right: 10px;
+}
+
+.baner .owl-dots {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.baner .owl-dots .owl-dot span {
+  background: #fff;
+}
+
+.baner .owl-dots .owl-dot.active span {
+  background: red;
+}
+
+.actual__card:hover .actual__img::before {
+  opacity: 0.4;
+}
+
+.actual__img {
+  position: relative;
+  overflow: hidden;
+}
+
+.actual__img img {
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.actual__img::before {
+  content: '';
+  position: absolute;
+  background-color: #000;
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  -webkit-transition: opacity .3s ease;
+  transition: opacity .3s ease;
+  pointer-events: none;
+}
+
+.actual__name {
+  font-weight: 700;
 }
 
 .footer {

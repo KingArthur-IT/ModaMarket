@@ -44,7 +44,7 @@ $(document).ready(function(){
         // autoplayTimeout: 2000,
         autoplaySpeed: 2000,
         nav: false,
-        dots: false,
+        dots: true,
         items: 1
     });
 

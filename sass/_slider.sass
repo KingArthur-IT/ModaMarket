@@ -9,8 +9,10 @@
             font-weight: 600
             &__old
                 display: inline
-                &.overlined span
-                    text-decoration: line-through
+                &.overlined 
+                    font-size: 14px
+                    & span
+                        text-decoration: line-through
             &__new
                 color: red
                 display: inline
@@ -39,11 +41,13 @@
         position: absolute
         top: 5px
         right: 5px
-        width: 30px
-        height: 30px
-        transition: fill .3s ease
+        width: 25px
+        height: 25px
+        transition: all .3s ease
+        transform: scale(1)
         &:hover
             fill: red
+            transform: scale(1.1)
     &__label
         position: absolute
         top: 0

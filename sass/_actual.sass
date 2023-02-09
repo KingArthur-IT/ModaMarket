@@ -1,0 +1,25 @@
+.actual
+    &__card
+        &:hover .actual__img::before
+            opacity: 0.4
+    &__img
+        position: relative
+        overflow: hidden
+        & img
+            width: 100%
+            aspect-ratio: 1
+        &::before
+            content: ''
+            position: absolute
+            background-color: #000
+            opacity: 0
+            top: 0
+            bottom: 0
+            left: 0
+            right: 0
+            z-index: 1
+            transition: opacity .3s ease
+            pointer-events: none
+    &__name
+        font-weight: 700
+    &__description
