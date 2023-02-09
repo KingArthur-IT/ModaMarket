@@ -1,0 +1,38 @@
+.footer
+    background: $primary
+    width: 100%
+    color: #fff
+    &__col
+        flex-basis: 33.3%
+    &__name
+        font-weight: 700
+    &__item
+        cursor: pointer
+        transition: color .3s ease
+        &:hover
+            color: darken(#fff, 25%)
+    &__logo
+        font-family: 'Oswald', sans-serif
+        font-size: 48px
+        font-weight: 700
+    &__about
+        text-align: right
+    &__social
+        margin-left: auto
+        display: block
+        width: fit-content
+        & svg
+            width: 30px
+            height: 30px
+            & path
+                transition: all .3s ease
+            & circle
+                transition: all .3s ease
+        &:hover
+            & svg
+                & path
+                    stroke: darken(#fff, 25%)
+                & circle
+                    stroke: darken(#fff, 25%)
+                & circle.point
+                    fill: darken(#fff, 25%)

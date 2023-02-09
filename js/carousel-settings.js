@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    //deals carousel
+    //popular carousel
     var popularCarousel = $('.popular-carousel').owlCarousel({
         loop: true,
         autoplay: false,
@@ -28,10 +28,30 @@ $(document).ready(function(){
         // }
     });
 
-    // $('.deals__left-arrow').click(function() {
-    //   dealsOwl.trigger('prev.owl.carousel');
-    // })
-    // $('.deals__right-arrow').click(function() {
-    //   dealsOwl.trigger('next.owl.carousel');
-    // });
+    $('.slider__arrow.arrow-left').click(function() {
+        popularCarousel.trigger('prev.owl.carousel');
+    })
+    $('.slider__arrow.arrow-right').click(function() {
+        popularCarousel.trigger('next.owl.carousel');
+    });
+
+    //baner carousel
+    var banerCarousel = $('.baner-carousel').owlCarousel({
+        loop: true,
+        autoplay: true,
+        autoplayHoverPause: true,
+        // slideTransition: 'linear',
+        // autoplayTimeout: 2000,
+        autoplaySpeed: 2000,
+        nav: false,
+        dots: false,
+        items: 1
+    });
+
+    $('.baner__arrow.arrow-left').click(function() {
+        banerCarousel.trigger('prev.owl.carousel');
+    })
+    $('.baner__arrow.arrow-right').click(function() {
+        banerCarousel.trigger('next.owl.carousel');
+    });
 });

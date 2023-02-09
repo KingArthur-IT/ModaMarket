@@ -1,0 +1,21 @@
+.baner
+    position: relative
+    &__arrow
+        position: absolute
+        cursor: pointer
+        top: 50%
+        transform: translateY(-130%)
+        z-index: 2
+        background: rgb(255, 255, 255)
+        border-radius: 50%
+        opacity: 0.4
+        transition: opacity .3s ease
+        & svg
+            width: 30px
+            height: 30px
+        &:hover
+            opacity: 1
+        &.arrow-left
+            left: 10px
+        &.arrow-right
+            right: 10px
