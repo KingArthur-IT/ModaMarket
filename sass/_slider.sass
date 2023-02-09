@@ -1,0 +1,75 @@
+.slider
+    &__title
+    &__carousel-wrap
+        position: relative
+    &__card
+        position: relative
+        cursor: pointer
+        & .price
+            font-weight: 600
+            &__old
+                display: inline
+                &.overlined span
+                    text-decoration: line-through
+            &__new
+                color: red
+                display: inline
+        & .name
+            font-weight: 700
+            line-height: 1
+        & .brand
+            font-weight: 600
+        & .description
+            line-height: 1
+            font-size: 14px
+        & .sizes
+            opacity: 0
+            transition: opacity .3s ease
+            line-height: 1.2
+        &:hover .sizes
+            opacity: 1
+        &.favorite .slider__favourite
+            fill: red
+    &__image
+        position: relative
+        & img
+            width: 100%
+            aspect-ratio: 0.6
+    &__favourite
+        position: absolute
+        top: 5px
+        right: 5px
+        width: 30px
+        height: 30px
+        transition: fill .3s ease
+        &:hover
+            fill: red
+    &__label
+        position: absolute
+        top: 0
+        left: 0
+        background-color: red
+        font-size: 12px
+        color: #fff
+        border-radius: 0 10px 0 10px
+        font-weight: 600
+    &__arrow
+        position: absolute
+        cursor: pointer
+        top: 50%
+        transform: translateY(-130%)
+        z-index: 2
+        background: rgb(255, 255, 255)
+        border-radius: 50%
+        opacity: 0.4
+        transition: opacity .3s ease
+        & svg
+            width: 30px
+            height: 30px
+        &:hover
+            opacity: 1
+
+.arrow-left
+    left: 10px
+.arrow-right
+    right: 10px
