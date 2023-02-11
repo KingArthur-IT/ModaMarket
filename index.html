@@ -39,7 +39,7 @@
             </div>
             <a href="index.html" class="header__logo text-center">Market</a>
             <div class="header__right d-flex align-items-center justify-content-end">
-                <div class="header__basket basket">
+                <div class="header__basket basket me-2">
                     <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3.5 4.5H5.05848C5.7542 4.5 6.10206 4.5 6.36395 4.68876C6.62584 4.87752 6.73584 5.20753 6.95585 5.86754L7.5 7.5" stroke="#222222" stroke-linecap="round"/>
                         <path d="M17.5 17.5H8.05091C7.90471 17.5 7.83162 17.5 7.77616 17.4938C7.18857 17.428 6.78605 16.8695 6.90945 16.2913C6.92109 16.2367 6.94421 16.1674 6.99044 16.0287V16.0287C7.04177 15.8747 7.06743 15.7977 7.09579 15.7298C7.38607 15.0342 8.04277 14.5608 8.79448 14.5054C8.8679 14.5 8.94906 14.5 9.11137 14.5H14.5" stroke="#222222" stroke-linecap="round" stroke-linejoin="round"/>
@@ -49,14 +49,39 @@
                     </svg>
                     <div class="basket__num">1</div>
                 </div>
+                <button class="btn btn-outline-dark fw-bold">Войти</button>
+                <div class="profile">
+                    <div class="dropdown">
+                        <svg class="profile__icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 18.86H17.24C16.44 18.86 15.68 19.17 15.12 19.73L13.41 21.42C12.63 22.19 11.36 22.19 10.58 21.42L8.87 19.73C8.31 19.17 7.54 18.86 6.75 18.86H6C4.34 18.86 3 17.53 3 15.89V4.97998C3 3.33998 4.34 2.01001 6 2.01001H18C19.66 2.01001 21 3.33998 21 4.97998V15.89C21 17.52 19.66 18.86 18 18.86Z" stroke="#292D32" stroke-width="1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11.9999 10.0001C13.2868 10.0001 14.33 8.95687 14.33 7.67004C14.33 6.38322 13.2868 5.34009 11.9999 5.34009C10.7131 5.34009 9.66992 6.38322 9.66992 7.67004C9.66992 8.95687 10.7131 10.0001 11.9999 10.0001Z" stroke="#292D32" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 15.6601C16 13.8601 14.21 12.4001 12 12.4001C9.79 12.4001 8 13.8601 8 15.6601" stroke="#292D32" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <ul class="dropdown-menu">
+                            <li class="d-flex mx-3 align-items-center mb-2">
+                                <div class="me-2 profile__label">AA</div>
+                                <div>
+                                    <div class="fw-bold profile__name">Артем Артем</div>
+                                    <div class="profile__email">artem@gmail.com</div>
+                                </div>
+                            </li>
+                            <hr class="m-0">
+                            <li><a class="dropdown-item" href="#">Заказы</a></li>
+                            <li><a class="dropdown-item" href="#">Возвраты</a></li>
+                            <li><a class="dropdown-item" href="#">Мои данные</a></li>
+                            <li><a class="dropdown-item" href="#">Выйти</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="head-nav py-2 container d-flex justify-content-start align-items-center">
             <a href="#" class="head-nav__item pe-4" data-nav-item="1">Новинки</a>
             <a href="#" class="head-nav__item pe-4" data-nav-item="2">Девочкам</a>
-            <a href="#" class="head-nav__item pe-4" data-nav-item="3">Девочкам</a>
-            <a href="#" class="head-nav__item pe-4" data-nav-item="4">Девочкам</a>
+            <a href="#" class="head-nav__item pe-4" data-nav-item="3">Женщинам</a>
+            <a href="#" class="head-nav__item pe-4" data-nav-item="4">Мужчинам</a>
             <a href="#" class="head-nav__item pe-4" data-nav-item="5">Девочкам</a>
+            <a href="#" class="head-nav__item pe-4" data-nav-item="6">Девочкам</a>
             <a href="#" class="head-nav__item pe-4" data-nav-item="6">Девочкам</a>
         </div>
         <div class="head-nav__content">
@@ -66,6 +91,8 @@
                         <a href="#" class="head-nav__content-head mb-2">Одежда</a>
                         <a href="#" class="head-nav__content-item">Одежда</a>
                         <a href="#" class="head-nav__content-item">Обувь</a>
+                        <a href="#" class="head-nav__content-item">Аксессуары</a>
+                        <a href="#" class="head-nav__content-item">Прочее</a>
                         <a href="#" class="head-nav__content-item">Аксессуары</a>
                         <a href="#" class="head-nav__content-item">Прочее</a>
                     </div>
@@ -264,7 +291,7 @@
         </section>
         <section class="section actual">
             <div class="container">
-                <h2 class="slider__title mb-3">Актуальное</h2>
+                <h2 class="slider__title mb-3">Актуально</h2>
                 <div class="row">
                     <div class="col-4">
                         <a href="#" class="actual__card">
