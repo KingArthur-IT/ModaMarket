@@ -54,4 +54,17 @@ $(document).ready(function(){
     $('.baner__arrow.arrow-right').click(function() {
         banerCarousel.trigger('next.owl.carousel');
     });
+
+    //catg carousel
+    $('.catg-slider').owlCarousel({
+        loop: true,
+        autoplay: true,
+        autoplayHoverPause: true,
+        slideTransition: 'linear',
+        autoplayTimeout: 5000,
+        autoplaySpeed: 5000,
+        nav: false,
+        dots: false,
+        items: 10
+    });
 });

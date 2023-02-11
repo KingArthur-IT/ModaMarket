@@ -1,0 +1,44 @@
+.catg-slider
+    padding-top: 30px
+.catg-slider
+    position: relative
+    overflow: hidden
+    &::before
+        content: ''
+        position: absolute
+        left: -30px
+        top: 20px
+        bottom: 0
+        width: 60px
+        background: #fff
+        z-index: 2
+        filter: blur(10px)
+    &::after
+        content: ''
+        position: absolute
+        right: -30px
+        top: 20px
+        bottom: 0
+        width: 60px
+        background: #fff
+        z-index: 2
+        filter: blur(10px)
+    & .owl-item
+        &:hover
+            background: #e4e4e4
+    &__item
+    &__img
+        border-radius: 50%
+        width: 60px
+        height: 60px
+        overflow: hidden
+        background: #fff
+        margin: auto
+        display: flex
+        align-items: center
+        & img
+            width: 100%
+            height: 100%
+            aspect-ratio: 1
+    &__descr
+        font-weight: 600
