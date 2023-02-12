@@ -15,7 +15,7 @@
     <!-- header -->
     <header class="header">
         <div class="header__top">
-            <div class="container d-flex justify-content-between">
+            <div class="cust-container d-flex justify-content-between">
                 <div class="text-white d-flex align-items-center header__city" data-bs-toggle="modal" data-bs-target="#selectCity">
                     <svg class="me-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M20.1819 10.1818C20.1819 16.5455 12.0001 22 12.0001 22C12.0001 22 3.81824 16.5455 3.81824 10.1818C3.81824 8.01187 4.68025 5.93079 6.21464 4.3964C7.74902 2.86201 9.8301 2 12.0001 2C14.17 2 16.2511 2.86201 17.7855 4.3964C19.3199 5.93079 20.1819 8.01187 20.1819 10.1818Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -31,7 +31,7 @@
                 </a>
             </div>
         </div>
-        <div class="container header__hero d-flex justify-content-between align-items-center">
+        <div class="cust-container header__hero d-flex justify-content-between align-items-center">
             <div class="header__tabs d-flex">
                 <a href="#" class="me-3 header__tab">Женщинам</a>
                 <a href="#" class="me-3 header__tab">Мужчинам</a>
@@ -49,8 +49,8 @@
                     </svg>
                     <div class="basket__num">1</div>
                 </div>
-                <button class="btn btn-outline-dark fw-bold">Войти</button>
-                <div class="profile">
+                <button class="btn btn-outline-dark fw-bold header__login-btn">Войти</button>
+                <div class="profile d-none">
                     <div class="dropdown">
                         <svg class="profile__icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M18 18.86H17.24C16.44 18.86 15.68 19.17 15.12 19.73L13.41 21.42C12.63 22.19 11.36 22.19 10.58 21.42L8.87 19.73C8.31 19.17 7.54 18.86 6.75 18.86H6C4.34 18.86 3 17.53 3 15.89V4.97998C3 3.33998 4.34 2.01001 6 2.01001H18C19.66 2.01001 21 3.33998 21 4.97998V15.89C21 17.52 19.66 18.86 18 18.86Z" stroke="#292D32" stroke-width="1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
@@ -75,7 +75,7 @@
                 </div>
             </div>
         </div>
-        <div class="head-nav py-2 container d-flex justify-content-start align-items-center">
+        <div class="head-nav py-2 cust-container d-flex flex-wrap justify-content-start align-items-center">
             <a href="#" class="head-nav__item pe-4" data-nav-item="1">Новинки</a>
             <a href="#" class="head-nav__item pe-4" data-nav-item="2">Девочкам</a>
             <a href="#" class="head-nav__item pe-4" data-nav-item="3">Женщинам</a>
@@ -85,7 +85,7 @@
             <a href="#" class="head-nav__item pe-4" data-nav-item="6">Девочкам</a>
         </div>
         <div class="head-nav__content">
-            <div class="container py-4">
+            <div class="cust-container py-4">
                 <div class="head-nav__hero" data-nav-content="1">
                     <div class="head-nav__col">
                         <a href="#" class="head-nav__content-head mb-2">Одежда</a>
@@ -125,7 +125,7 @@
     </header>
 
     <!-- Main -->
-    <main>
+    <main class="d-none">
         <section class="baner owl-theme">
             <div class="baner-carousel owl-carousel">
                 <img src="./assets/baner.jpg" alt="1">
@@ -144,51 +144,51 @@
             </div>
         </section>
         <section class="catg-slider-wrap">
-            <div class="container">
+            <div class="cust-container">
                 <div class="catg-slider owl-carousel">
-                    <a href="#" class="catg-slider__item p-3">
+                    <a href="#" class="catg-slider__item px-3">
                         <div class="catg-slider__img mb-2">
                             <img src="./assets/catg-slider/top.png" alt="top">
                         </div>
                         <div class="catg-slider__descr text-center">Новинки</div>
                     </a>
-                    <a href="#" class="catg-slider__item p-3">
+                    <a href="#" class="catg-slider__item px-3">
                         <div class="catg-slider__img mb-2">
                             <img src="./assets/catg-slider/kurtka.jpeg" alt="top">
                         </div>
                         <div class="catg-slider__descr text-center">Куртки</div>
                     </a>
-                    <a href="#" class="catg-slider__item p-3">
+                    <a href="#" class="catg-slider__item px-3">
                         <div class="catg-slider__img mb-2">
                             <img src="./assets/catg-slider/shoes.jpeg" alt="top">
                         </div>
                         <div class="catg-slider__descr text-center">Обувь</div>
                     </a>
-                    <a href="#" class="catg-slider__item p-3">
+                    <a href="#" class="catg-slider__item px-3">
                         <div class="catg-slider__img mb-2">
                             <img src="./assets/catg-slider/acses.jpg" alt="top">
                         </div>
                         <div class="catg-slider__descr text-center">Аксессуары</div>
                     </a>
-                    <a href="#" class="catg-slider__item p-3">
+                    <a href="#" class="catg-slider__item px-3">
                         <div class="catg-slider__img mb-2">
                             <img src="./assets/catg-slider/home.jpeg" alt="top">
                         </div>
                         <div class="catg-slider__descr text-center">Дом</div>
                     </a>
-                    <a href="#" class="catg-slider__item p-3">
+                    <a href="#" class="catg-slider__item px-3">
                         <div class="catg-slider__img mb-2">
                             <img src="./assets/catg-slider/djince.jpeg" alt="top">
                         </div>
                         <div class="catg-slider__descr text-center">Джинсы</div>
                     </a>
-                    <a href="#" class="catg-slider__item p-3">
+                    <a href="#" class="catg-slider__item px-3">
                         <div class="catg-slider__img mb-2">
                             <img src="./assets/catg-slider/sviter.jpeg" alt="top">
                         </div>
                         <div class="catg-slider__descr text-center">Свитер</div>
                     </a>
-                    <a href="#" class="catg-slider__item p-3">
+                    <a href="#" class="catg-slider__item px-3">
                         <div class="catg-slider__img mb-2">
                             <img src="./assets/catg-slider/sumka.jpeg" alt="top">
                         </div>
@@ -197,8 +197,8 @@
                 </div>
             </div>
         </section>
-        <section class="section choose-section mb-10">
-            <div class="container py-4">
+        <section class="section choose-section mb-10 pt-0">
+            <div class="cust-container py-4">
                 <h1 class="text-center mb-4">Выберите интересующий вас раздел</h1>
                 <div class="row">
                     <div class="col-4">
@@ -223,7 +223,7 @@
             </div>
         </section>
         <section class="section slider">
-            <div class="container">
+            <div class="cust-container">
                 <h2 class="slider__title mb-3">Популярное</h2>
                 <div class="slider__carousel-wrap">
                     <div class="slider__carousel popular-carousel owl-carousel">
@@ -290,7 +290,7 @@
             </div>
         </section>
         <section class="section actual">
-            <div class="container">
+            <div class="cust-container">
                 <h2 class="slider__title mb-3">Актуально</h2>
                 <div class="row">
                     <div class="col-4">
@@ -333,8 +333,8 @@
 
     <!-- footer -->
     <footer class="footer py-4">
-        <div class="container d-flex justify-content-between">
-            <div class="footer__col">
+        <div class="cust-container d-flex flex-wrap justify-content-between">
+            <div class="footer__col footer__list">
                 <div class="footer__name mb-1">Помощь</div>
                 <div class="footer__item">Как оформить заказ?</div>
                 <div class="footer__item">Как выбрать размер?</div>
@@ -343,10 +343,10 @@
                 <div class="footer__item">Публичная оферта</div>
                 <div class="footer__item">Часто задаваемые вопросы</div>
             </div>
-            <div class="footer__col">
+            <div class="footer__col footer__logo-wrap">
                 <div class="footer__logo text-center">Market</div>
             </div>
-            <div class="footer__col">
+            <div class="footer__col footer__about-wrap">
                 <div class="footer__name mb-1 footer__about">О нас</div>
                 <a href="#" class="footer__social">
                     <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

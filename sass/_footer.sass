@@ -36,3 +36,15 @@
                     stroke: darken(#fff, 25%)
                 & circle.point
                     fill: darken(#fff, 25%)
+
+@media screen and (max-width: 768px)
+    .footer
+        &__logo-wrap
+            order: -1
+            flex-basis: 100%
+        &__logo
+            text-align: left !important
+        &__list
+            flex-basis: 60%
+        &__about-wrap
+            flex-basis: 40%

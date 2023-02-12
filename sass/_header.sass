@@ -115,3 +115,49 @@
     transform: translateY(-3px)
   90%
     transform: translateY(0px)
+
+@media screen and (max-width: 768px)
+  .header
+    &__hero
+      flex-wrap: wrap
+    &__tabs
+      order: 1
+      flex-wrap: wrap
+      flex-basis: 100%
+    &__logo
+      flex-basis: 40%
+      text-align: left !important
+    &__right
+      flex-basis: 60%
+
+@media screen and (max-width: 768px)
+  .header
+    &__hero
+      padding-bottom: 4px
+    &__tab
+      font-size: 14px
+
+@media screen and (max-width: 475px)
+  .header
+    &__logo
+      font-size: 36px
+    &__login-btn
+      font-size: 14px
+  .basket
+    & svg
+      width: 40px
+      height: 40px
+    &__num
+      width: 16px
+      height: 16px
+      font-size: 12px
+    
+@media screen and (max-width: 425px)
+  .header
+    &__top
+      font-size: 12px
+
+@media screen and (max-width: 375px)
+  .header
+    &__tab
+      font-size: 12px
