@@ -11,6 +11,7 @@
         opacity: 0.4
         transition: opacity .3s ease
         box-shadow: 0 2px 8px #00000014
+        padding: 8px
         & svg
             width: 30px
             height: 30px
@@ -29,3 +30,23 @@
         & .owl-dot.active span
             background: red
             
+@media screen and (max-width: 768px)
+    .baner
+        &__arrow
+            transform: translateY(-50%)
+
+@media screen and (max-width: 600px)
+    .baner
+        &__arrow
+            padding: 4px 8px
+            & svg
+                width: 20px
+                height: 20px
+
+@media screen and (max-width: 425px)
+    .baner
+        &__arrow
+            padding: 2px 8px
+            & svg
+                width: 15px
+                height: 15px

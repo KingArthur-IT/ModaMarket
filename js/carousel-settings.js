@@ -9,23 +9,20 @@ $(document).ready(function(){
         nav: false,
         dots: false,
         items: 5,
-        // responsive:{
-        //   0:{
-        //     items: 1,
-        //     stagePadding: 50,
-        //   },
-        //   426:{
-        //     items: 1,
-        //     stagePadding: 100,
-        //   },
-        //   768:{
-        //     items: 2,
-        //     stagePadding: 100,
-        //   },
-        //   1380:{
-        //     items: 3,
-        //   },
-        // }
+        responsive:{
+          0: {
+            items: 2,
+          },
+          425: {
+            items: 3,
+          },
+          600: {
+            items: 4,
+          },
+          768: {
+            items: 5,
+          },
+        }
     });
 
     $('.slider__arrow.arrow-left').click(function() {
@@ -40,9 +37,7 @@ $(document).ready(function(){
         loop: true,
         autoplay: true,
         autoplayHoverPause: true,
-        // slideTransition: 'linear',
-        // autoplayTimeout: 2000,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 2500,
         nav: false,
         dots: true,
         items: 1
@@ -65,6 +60,23 @@ $(document).ready(function(){
         autoplaySpeed: 5000,
         nav: false,
         dots: false,
-        items: 10
+        items: 10,
+        responsive: {
+          0:{
+            items: 4,
+          },
+          425:{
+            items: 4,
+          },
+          600: {
+            items: 5,
+          },
+          768: {
+            items: 7,
+          },
+          1024: {
+            items: 10,
+          },
+        }
     });
 });
