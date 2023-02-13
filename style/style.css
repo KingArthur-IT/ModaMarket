@@ -19,7 +19,7 @@ a, a:visited {
 }
 
 body {
-  line-height: 1.7;
+  line-height: 1.35;
   font-family: 'Open Sans', sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -384,6 +384,7 @@ body {
 .head-nav__item {
   -webkit-transition: color .3s ease;
   transition: color .3s ease;
+  line-height: 2;
 }
 
 .head-nav__item:hover {
@@ -411,6 +412,7 @@ body {
 .head-nav__content.active {
   opacity: 1;
   pointer-events: all;
+  z-index: 3;
 }
 
 .head-nav__content-head {
@@ -432,6 +434,7 @@ body {
   -webkit-transition: color .3s ease;
   transition: color .3s ease;
   display: block;
+  margin-bottom: 6px;
 }
 
 .head-nav__content-item:hover {
@@ -535,6 +538,7 @@ body {
 .slider__card .name {
   font-weight: 700;
   line-height: 1.3;
+  margin-bottom: 2px;
 }
 
 .slider__card .brand {
@@ -763,6 +767,7 @@ body {
 .actual__img {
   position: relative;
   overflow: hidden;
+  margin-bottom: 6px;
 }
 
 .actual__img img {
@@ -787,6 +792,24 @@ body {
 
 .actual__name {
   font-weight: 700;
+  margin-bottom: 6px;
+}
+
+@media screen and (max-width: 576px) {
+  .actual__card {
+    margin-bottom: 16px;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .actual__name {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+  .actual__description {
+    font-size: 12px;
+  }
 }
 
 .catg-slider {
@@ -896,6 +919,7 @@ body {
   cursor: pointer;
   -webkit-transition: color .3s ease;
   transition: color .3s ease;
+  padding: 3px 0;
 }
 
 .footer__item:hover {
@@ -971,5 +995,14 @@ body {
 @media screen and (max-width: 475px) {
   .footer__logo {
     font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .footer__name {
+    font-size: 14px;
+  }
+  .footer__item {
+    font-size: 12px;
   }
 }

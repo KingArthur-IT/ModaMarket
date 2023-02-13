@@ -9,6 +9,7 @@
     &__item
         cursor: pointer
         transition: color .3s ease
+        padding: 3px 0
         &:hover
             color: darken(#fff, 25%)
     &__logo
@@ -53,3 +54,10 @@
     .footer
         &__logo
             font-size: 36px
+
+@media screen and (max-width: 425px)
+    .footer
+        &__name
+            font-size: 14px
+        &__item
+            font-size: 12px
