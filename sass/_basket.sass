@@ -1,0 +1,68 @@
+.basket
+    min-width: 1024px
+    &__empty
+        & svg
+            width: 80px
+            height: 80px
+            display: block
+            margin: 0 auto
+            margin-bottom: 12px
+        & a
+            width: fit-content
+    &__item
+        border-bottom: 1px solid #ccc
+    &__img-link
+        width: fit-content
+        & img
+            max-width: 150px
+    &__about
+        width: fit-content
+    &__num-btn
+        &:hover
+            & .basket__num-btn-icon path
+                stroke: #fff
+    &__num-btn-icon
+        width: 24px
+        height: 24px
+    & .price
+        font-weight: 600
+        font-size: 18px
+        &__old
+            display: inline
+            &.overlined 
+                font-size: 16px
+                & span
+                    text-decoration: line-through
+        &__new
+            color: red
+            display: inline
+        &__label
+            background-color: red
+            font-size: 12px
+            color: #fff
+            border-radius: 0 10px 0 10px
+            font-weight: 600
+    &__favourite
+        cursor: pointer
+        & svg
+            width: 25px
+            height: 25px
+            transition: all .3s ease
+            transform: scale(1)
+        &:hover svg
+            fill: red
+            transform: scale(1.1)
+            & path
+                stroke: red
+    &__trash
+        cursor: pointer
+        & svg
+            width: 25px
+            height: 25px
+            transition: all .3s ease
+        &:hover svg
+            & path
+                stroke: red
+    &__card
+        box-shadow: 0 0 8px rgba(0, 0, 0, .16)
+        border: none

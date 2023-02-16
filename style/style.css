@@ -174,22 +174,22 @@ body {
   position: relative;
 }
 
-.basket svg {
+.header__basket svg {
   width: 50px;
   height: 50px;
   display: block;
 }
 
-.basket svg path {
+.header__basket svg path {
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
 }
 
-.basket:hover svg .basket__fill {
+.header__basket:hover svg .header__basket-fill {
   fill: #222222;
 }
 
-.basket__num {
+.header__basket-num {
   position: absolute;
   width: 20px;
   height: 20px;
@@ -328,11 +328,11 @@ body {
   .header__login-btn {
     font-size: 14px;
   }
-  .basket svg {
+  .header__basket svg {
     width: 40px;
     height: 40px;
   }
-  .basket__num {
+  .header__basket-num {
     width: 16px;
     height: 16px;
     font-size: 12px;
@@ -1354,4 +1354,125 @@ body {
   .catalog__card .brand {
     font-size: 14px;
   }
+}
+
+.basket {
+  min-width: 1024px;
+}
+
+.basket__empty svg {
+  width: 80px;
+  height: 80px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 12px;
+}
+
+.basket__empty a {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.basket__item {
+  border-bottom: 1px solid #ccc;
+}
+
+.basket__img-link {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.basket__img-link img {
+  max-width: 150px;
+}
+
+.basket__about {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.basket__num-btn:hover .basket__num-btn-icon path {
+  stroke: #fff;
+}
+
+.basket__num-btn-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.basket .price {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.basket .price__old {
+  display: inline;
+}
+
+.basket .price__old.overlined {
+  font-size: 16px;
+}
+
+.basket .price__old.overlined span {
+  text-decoration: line-through;
+}
+
+.basket .price__new {
+  color: red;
+  display: inline;
+}
+
+.basket .price__label {
+  background-color: red;
+  font-size: 12px;
+  color: #fff;
+  border-radius: 0 10px 0 10px;
+  font-weight: 600;
+}
+
+.basket__favourite {
+  cursor: pointer;
+}
+
+.basket__favourite svg {
+  width: 25px;
+  height: 25px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.basket__favourite:hover svg {
+  fill: red;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.basket__favourite:hover svg path {
+  stroke: red;
+}
+
+.basket__trash {
+  cursor: pointer;
+}
+
+.basket__trash svg {
+  width: 25px;
+  height: 25px;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.basket__trash:hover svg path {
+  stroke: red;
+}
+
+.basket__card {
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.16);
+  border: none;
 }
