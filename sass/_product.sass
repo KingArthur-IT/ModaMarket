@@ -1,4 +1,5 @@
 .product
+    min-width: 768px
     & .price
         font-weight: 600
         &__old
@@ -26,11 +27,12 @@
         float: left 
         background-size: cover 
         margin-top: 10px
-        border: 1px solid #ccc
         border-radius: 5px
-        transition: border .3s ease
+        transition: transform .3s ease
+        transform: scale(0.95)
         &.active
-            border: 1px solid #ff0000
+            box-shadow: 0 2px 8px #0000004d
+            transform: scale(1)
     &__img
         max-width: 600px
         margin: 0 auto
@@ -52,9 +54,9 @@
         &:hover
             opacity: 1
         &.arrow-left
-            left: -10px
+            left: 0px
         &.arrow-right
-            right: -10px
+            right: 0px
     &__size-select select:focus
         border-color: rgba(0, 0, 0, 0.6)
         box-shadow: none
