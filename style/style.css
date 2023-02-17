@@ -1032,6 +1032,7 @@ body {
   font-size: 14px;
   -webkit-transition: color .3s ease;
   transition: color .3s ease;
+  cursor: pointer;
 }
 
 .modal-link:hover {

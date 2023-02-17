@@ -39,7 +39,7 @@
             </div>
             <a href="index.html" class="header__logo text-center">Market</a>
             <div class="header__right d-flex align-items-center justify-content-end">
-                <div class="header__basket me-2">
+                <a href="./basket.html" class="header__basket me-2">
                     <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3.5 4.5H5.05848C5.7542 4.5 6.10206 4.5 6.36395 4.68876C6.62584 4.87752 6.73584 5.20753 6.95585 5.86754L7.5 7.5" stroke="#222222" stroke-linecap="round"/>
                         <path d="M17.5 17.5H8.05091C7.90471 17.5 7.83162 17.5 7.77616 17.4938C7.18857 17.428 6.78605 16.8695 6.90945 16.2913C6.92109 16.2367 6.94421 16.1674 6.99044 16.0287V16.0287C7.04177 15.8747 7.06743 15.7977 7.09579 15.7298C7.38607 15.0342 8.04277 14.5608 8.79448 14.5054C8.8679 14.5 8.94906 14.5 9.11137 14.5H14.5" stroke="#222222" stroke-linecap="round" stroke-linejoin="round"/>
@@ -48,7 +48,7 @@
                         <circle cx="9" cy="20" r="1" fill="#222222"/>
                     </svg>
                     <div class="header__basket-num">1</div>
-                </div>
+                </a>
                 <button class="btn btn-outline-dark fw-bold header__login-btn" data-bs-toggle="modal" data-bs-target="#loginModal">Войти</button>
                 <div class="profile d-none">
                     <div class="dropdown">
@@ -61,15 +61,15 @@
                             <li class="d-flex mx-3 align-items-center mb-2">
                                 <div class="me-2 profile__label">AA</div>
                                 <div>
-                                    <div class="fw-bold profile__name">Артем Артем</div>
-                                    <div class="profile__email">artem@gmail.com</div>
+                                    <div id="usernameData" class="fw-bold profile__name">Артем Артем</div>
+                                    <div id="useremailData" class="profile__email">artem@gmail.com</div>
                                 </div>
                             </li>
                             <hr class="m-0">
-                            <li><a class="dropdown-item" href="#">Заказы</a></li>
-                            <li><a class="dropdown-item" href="#">Возвраты</a></li>
-                            <li><a class="dropdown-item" href="#">Мои данные</a></li>
-                            <li><a class="dropdown-item" href="#">Выйти</a></li>
+                            <li><a class="dropdown-item" href="./my-info.html#myOrders">Заказы</a></li>
+                            <li><a class="dropdown-item" href="./my-info.html#myReturns">Возвраты</a></li>
+                            <li><a class="dropdown-item" href="./my-info.html#myData">Мои данные</a></li>
+                            <li><div id="logout" class="dropdown-item">Выйти</div></li>
                         </ul>
                     </div>
                 </div>
@@ -130,7 +130,7 @@
         <section class="section">
             <div class="cust-container">
                 <!-- Мои заказы -->
-                <h2 id="my-orders">Мои заказы</h2>
+                <h2 id="myOrders">Мои заказы</h2>
                 <div class="row d-flex pb-3">
                     <a href="./product.html" class="basket__img-link">
                         <img src="./assets/popular/1.jpg" alt="img">
@@ -163,7 +163,7 @@
 
                 <hr>
                 <!-- Возвраты -->
-                <h2>Возвраты</h2>
+                <h2 id="myReturns">Возвраты</h2>
                 <div class="row d-flex pb-3">
                     <a href="./product.html" class="basket__img-link">
                         <img src="./assets/popular/1.jpg" alt="img">
@@ -179,7 +179,7 @@
 
                 <hr>
                 <!-- Мои данные -->
-                <h2>Мои данные</h2>
+                <h2 id="myData">Мои данные</h2>
                 <!-- мои данные: имя -->
                 <div class="input-group mb-3 my-info__input-wrap">
                     <span class="input-group-text">
@@ -301,16 +301,19 @@
                         </span>
                         <input id="selectedCity" type="text" class="form-control modalInput" placeholder="Город" aria-label="Username" aria-describedby="basic-addon1">
                     </div>
-                    <ul class="d-flex flex-wrap align-items-center px-0 cities-list">
-                        <li class="py-1 px-2 px-sm-3 city-item">г. Москва</li>
-                        <li class="py-1 px-2 px-sm-3 city-item">г. Санкт-Петербург</li>
-                        <li class="py-1 px-2 px-sm-3 city-item">г. Севастополь</li>
-                        <li class="py-1 px-2 px-sm-3 city-item">г. Ростов-на-Дону</li>
-                        <li class="py-1 px-2 px-sm-3 city-item">г. Таганрог</li>
-                        <li class="py-1 px-2 px-sm-3 city-item">г. Сочи</li>
-                        <li class="py-1 px-2 px-sm-3 city-item">г. Уфа</li>
-                        <li class="py-1 px-2 px-sm-3 city-item">г. Новороссийск</li>
-                        <li class="py-1 px-2 px-sm-3 city-item">г. Туапсе</li>
+                    <ul class="d-flex flex-wrap align-items-center px-0">
+                        <div class="col-6">
+                            <li class="py-1 px-2 px-sm-3 city-item">г. Москва</li>
+                            <li class="py-1 px-2 px-sm-3 city-item">г. Санкт-Петербург</li>
+                            <li class="py-1 px-2 px-sm-3 city-item">г. Севастополь</li>
+                            <li class="py-1 px-2 px-sm-3 city-item">г. Уфа</li>
+                        </div>
+                        <div class="col-6">
+                            <li class="py-1 px-2 px-sm-3 city-item">г. Ростов-на-Дону</li>
+                            <li class="py-1 px-2 px-sm-3 city-item">г. Таганрог</li>
+                            <li class="py-1 px-2 px-sm-3 city-item">г. Сочи</li>
+                            <li class="py-1 px-2 px-sm-3 city-item">г. Новороссийск</li>
+                        </div>
                     </ul>
                 </div>
             </div>
@@ -325,14 +328,16 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
+                    <!-- email -->
                     <div class="input-group mb-3">
                         <span class="input-group-text">
                             <svg class="modal-input-icon" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 5C10.3431 5 9 6.34315 9 8C9 9.65685 10.3431 11 12 11C13.6569 11 15 9.65685 15 8C15 6.34315 13.6569 5 12 5ZM7 8C7 5.23858 9.23858 3 12 3C14.7614 3 17 5.23858 17 8C17 10.7614 14.7614 13 12 13C9.23858 13 7 10.7614 7 8ZM7.45609 16.7264C6.40184 17.1946 6 17.7858 6 18.5C6 18.7236 6.03976 18.8502 6.09728 18.942C6.15483 19.0338 6.29214 19.1893 6.66219 19.3567C7.45312 19.7145 9.01609 20 12 20C14.9839 20 16.5469 19.7145 17.3378 19.3567C17.7079 19.1893 17.8452 19.0338 17.9027 18.942C17.9602 18.8502 18 18.7236 18 18.5C18 17.7858 17.5982 17.1946 16.5439 16.7264C15.4614 16.2458 13.8722 16 12 16C10.1278 16 8.53857 16.2458 7.45609 16.7264ZM6.64442 14.8986C8.09544 14.2542 10.0062 14 12 14C13.9938 14 15.9046 14.2542 17.3556 14.8986C18.8348 15.5554 20 16.7142 20 18.5C20 18.9667 19.9148 19.4978 19.5973 20.0043C19.2798 20.5106 18.7921 20.8939 18.1622 21.1789C16.9531 21.7259 15.0161 22 12 22C8.98391 22 7.04688 21.7259 5.83781 21.1789C5.20786 20.8939 4.72017 20.5106 4.40272 20.0043C4.08524 19.4978 4 18.9667 4 18.5C4 16.7142 5.16516 15.5554 6.64442 14.8986Z" fill="#0F1729"/>
+                                <path d="M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12ZM16 12V13.5C16 14.8807 17.1193 16 18.5 16V16C19.8807 16 21 14.8807 21 13.5V12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21H16" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                         </span>
-                        <input type="text" class="form-control modalInput" placeholder="Логин" aria-label="Username" aria-describedby="basic-addon1">
+                        <input id="emailLogin" type="text" class="form-control modalInput" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1">
                     </div>
+                    <!-- password -->
                     <div class="input-group mb-3">
                         <span class="input-group-text">
                             <svg class="modal-input-icon" fill="#000000" width="800px" height="800px" viewBox="0 0 32 32" id="icon" xmlns="http://www.w3.org/2000/svg">
@@ -341,17 +346,116 @@
                                 <rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" fill="none" width="32" height="32"/>
                             </svg>
                         </span>
-                        <input type="password" class="form-control modalInput" placeholder="Пароль" aria-label="Username" aria-describedby="basic-addon1">
+                        <input id="passwordLogin" type="password" class="form-control modalInput" placeholder="Пароль" aria-label="Username" aria-describedby="basic-addon1">
                     </div>
+                    <div id="loginError" class="input-error mb-3 d-none">Не верный email или пароль</div>
                     <div class="d-flex justify-content-between align-items-center mb-1">
-                        <a href="" class="fw-bold modal-link">Еще нет аккауна?</a>
-                        <a href="" class="fw-bold modal-link">Забыли пароль</a>
+                        <div id="openRegisterModal" class="fw-bold modal-link">Еще нет аккауна?</div>
+                        <div id="openForgotModal" class="fw-bold modal-link">Забыли пароль</div>
                     </div>
                     <button id="loginBtn" class="btn btn-outline-dark fw-bold d-block m-auto">Войти</button>
                 </div>
             </div>
         </div>
     </div>
+    <!-- register -->
+    <div class="modal fade" id="registerModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">Добро пожаловать</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- name -->
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">
+                            <svg class="modal-input-icon" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.5 21.0001H6.5C5.11929 21.0001 4 19.8808 4 18.5001C4 14.4194 10 14.5001 12 14.5001C14 14.5001 20 14.4194 20 18.5001C20 19.8808 18.8807 21.0001 17.5 21.0001Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <input id="nameRegister" type="text" class="form-control modalInput" placeholder="Ваше имя" aria-label="Email" aria-describedby="basic-addon1">
+                    </div>
+                    <!-- email -->
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">
+                            <svg class="modal-input-icon" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12ZM16 12V13.5C16 14.8807 17.1193 16 18.5 16V16C19.8807 16 21 14.8807 21 13.5V12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21H16" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <input id="emailRegister" type="text" class="form-control modalInput" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1">
+                    </div>
+                    <!-- password -->
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">
+                            <svg class="modal-input-icon" fill="#000000" width="800px" height="800px" viewBox="0 0 32 32" id="icon" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21,2a8.9977,8.9977,0,0,0-8.6119,11.6118L2,24v6H8L18.3881,19.6118A9,9,0,1,0,21,2Zm0,16a7.0125,7.0125,0,0,1-2.0322-.3022L17.821,17.35l-.8472.8472-3.1811,3.1812L12.4141,20,11,21.4141l1.3787,1.3786-1.5859,1.586L9.4141,23,8,24.4141l1.3787,1.3786L7.1716,28H4V24.8284l9.8023-9.8023.8472-.8474-.3473-1.1467A7,7,0,1,1,21,18Z"/>
+                                <circle cx="22" cy="10" r="2"/>
+                                <rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" fill="none" width="32" height="32"/>
+                            </svg>
+                        </span>
+                        <input id="passwordRegister" type="password" class="form-control modalInput" placeholder="Пароль" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <!-- repeat password -->
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">
+                            <svg class="modal-input-icon" fill="#000000" width="800px" height="800px" viewBox="0 0 32 32" id="icon" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21,2a8.9977,8.9977,0,0,0-8.6119,11.6118L2,24v6H8L18.3881,19.6118A9,9,0,1,0,21,2Zm0,16a7.0125,7.0125,0,0,1-2.0322-.3022L17.821,17.35l-.8472.8472-3.1811,3.1812L12.4141,20,11,21.4141l1.3787,1.3786-1.5859,1.586L9.4141,23,8,24.4141l1.3787,1.3786L7.1716,28H4V24.8284l9.8023-9.8023.8472-.8474-.3473-1.1467A7,7,0,1,1,21,18Z"/>
+                                <circle cx="22" cy="10" r="2"/>
+                                <rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" fill="none" width="32" height="32"/>
+                            </svg>
+                        </span>
+                        <input id="repeatPasswordRegister" type="password" class="form-control modalInput" placeholder="Повторите пароль" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <div id="registerError" class="input-error mb-3 d-none">Не верный email или пароль</div>
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div id="openLoginModal" class="fw-bold modal-link">Есть аккаунт? Войдите</div>
+                    </div>
+                    <button id="registerBtn" class="btn btn-outline-dark fw-bold d-block m-auto">Зарегистрироваться</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- forgot password -->
+    <div class="modal fade" id="forgotPasswordModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">Забыли пароль?</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- email -->
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">
+                            <svg class="modal-input-icon" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12ZM16 12V13.5C16 14.8807 17.1193 16 18.5 16V16C19.8807 16 21 14.8807 21 13.5V12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21H16" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <input id="emailForgotPass" type="text" class="form-control modalInput" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1">
+                    </div>
+                    <div id="forgotError" class="input-error mb-3 d-none">Не верный email</div>
+                    <button id="forgotBtn" class="btn btn-outline-dark fw-bold d-block m-auto">Сбросить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- reset password -->
+    <div class="modal fade" id="resetPasswordModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">Забыли пароль?</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h1 class="modal-title fs-5 text-center mb-3">Пароль успешно сброшен</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- script -->
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/jquery.slim.js"></script>
