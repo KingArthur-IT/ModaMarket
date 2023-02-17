@@ -45,6 +45,11 @@ body {
   overflow-x: scroll;
 }
 
+.input-error {
+  color: red;
+  font-size: 12px;
+}
+
 @media screen and (max-width: 425px) {
   .cust-container {
     padding: 0 16px;
@@ -1475,4 +1480,74 @@ body {
   -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.16);
           box-shadow: 0 0 8px rgba(0, 0, 0, 0.16);
   border: none;
+}
+
+.my-info__input-wrap {
+  max-width: 400px;
+}
+
+.my-info__action-btn {
+  border: 1px solid #198754;
+}
+
+.my-info__action-btn .edit-icon {
+  display: none;
+}
+
+.my-info__action-btn .save-icon {
+  display: block;
+}
+
+.my-info__action-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.my-info__action-btn:hover {
+  background-color: #198754;
+}
+
+.my-info__action-btn:hover svg path {
+  stroke: #fff;
+}
+
+.my-info__input:focus {
+  border-color: rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  outline: 0 none;
+}
+
+.my-info__input[readonly] {
+  border-color: #dee2e6;
+}
+
+.my-info__input[readonly] ~ .my-info__action-btn {
+  border: 1px solid #ffc107;
+}
+
+.my-info__input[readonly] ~ .my-info__action-btn .save-icon {
+  display: none;
+}
+
+.my-info__input[readonly] ~ .my-info__action-btn .edit-icon {
+  display: block;
+}
+
+.my-info__input[readonly] ~ .my-info__action-btn:hover {
+  background-color: #ffc107;
+}
+
+.my-info__password-link {
+  border-bottom: 1px solid #222222;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+  -webkit-transition: border .3s ease;
+  transition: border .3s ease;
+}
+
+.my-info__password-link:hover {
+  border-bottom: 1px solid #fff;
 }

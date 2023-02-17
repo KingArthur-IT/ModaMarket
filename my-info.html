@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModaMarket</title>
+    <link rel="stylesheet" href="./style/bootstrap.min.css">
+    <link rel="stylesheet" href="./style/owl.carousel.min.css">
+    <link rel="stylesheet" href="./style/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./style/style.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Oswald:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- header -->
+    <header class="header">
+        <div class="header__top">
+            <div class="cust-container d-flex justify-content-between">
+                <div class="text-white d-flex align-items-center header__city" data-bs-toggle="modal" data-bs-target="#selectCityModal">
+                    <svg class="me-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20.1819 10.1818C20.1819 16.5455 12.0001 22 12.0001 22C12.0001 22 3.81824 16.5455 3.81824 10.1818C3.81824 8.01187 4.68025 5.93079 6.21464 4.3964C7.74902 2.86201 9.8301 2 12.0001 2C14.17 2 16.2511 2.86201 17.7855 4.3964C19.3199 5.93079 20.1819 8.01187 20.1819 10.1818Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M12.0001 12.9091C13.5063 12.9091 14.7274 11.688 14.7274 10.1818C14.7274 8.67559 13.5063 7.45454 12.0001 7.45454C10.4939 7.45454 9.27283 8.67559 9.27283 10.1818C9.27283 11.688 10.4939 12.9091 12.0001 12.9091Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span id="myCity">Укажите Ваш город</span>
+                </div>
+                <a href="tel:+" class="text-white header__phone d-flex align-items-center">
+                    <svg class="me-1" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.0001 10.9999C21.0001 6.58166 17.4184 2.99994 13.0001 2.99994M14 7.12593C15.4057 7.48768 16.5123 8.59432 16.8741 10M16.062 14.2507V14.2507C16.6052 13.5264 17.5886 13.2943 18.3983 13.6992L19.6337 14.3168C20.4404 14.7202 20.8773 15.6135 20.7004 16.4979L20.3216 18.3922C20.1346 19.3271 19.3109 20.0146 18.3636 19.9075C11.1005 19.0859 4.91414 12.8995 4.09253 5.63644C3.98537 4.68912 4.67292 3.86542 5.60777 3.67845L7.50207 3.29959C8.38646 3.12271 9.27982 3.55963 9.68316 4.36632L10.3008 5.60168C10.7057 6.41142 10.4736 7.39483 9.7493 7.93802V7.93802C9.27761 8.2918 8.99002 8.86004 9.21796 9.40381C10.0014 11.2728 12.7272 13.9986 14.5962 14.782C15.14 15.01 15.7082 14.7224 16.062 14.2507Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>+7 (999) 000-00-00</span>
+                </a>
+            </div>
+        </div>
+        <div class="cust-container header__hero d-flex justify-content-between align-items-center">
+            <div class="header__tabs d-flex">
+                <a href="#" class="me-3 header__tab">Женщинам</a>
+                <a href="#" class="me-3 header__tab">Мужчинам</a>
+                <a href="#" class="header__tab">Детям</a>
+            </div>
+            <a href="index.html" class="header__logo text-center">Market</a>
+            <div class="header__right d-flex align-items-center justify-content-end">
+                <div class="header__basket me-2">
+                    <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.5 4.5H5.05848C5.7542 4.5 6.10206 4.5 6.36395 4.68876C6.62584 4.87752 6.73584 5.20753 6.95585 5.86754L7.5 7.5" stroke="#222222" stroke-linecap="round"/>
+                        <path d="M17.5 17.5H8.05091C7.90471 17.5 7.83162 17.5 7.77616 17.4938C7.18857 17.428 6.78605 16.8695 6.90945 16.2913C6.92109 16.2367 6.94421 16.1674 6.99044 16.0287V16.0287C7.04177 15.8747 7.06743 15.7977 7.09579 15.7298C7.38607 15.0342 8.04277 14.5608 8.79448 14.5054C8.8679 14.5 8.94906 14.5 9.11137 14.5H14.5" stroke="#222222" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path class="header__basket-fill" d="M14.1787 14.5H11.1376C9.85836 14.5 9.21875 14.5 8.71781 14.1697C8.21687 13.8394 7.96492 13.2515 7.461 12.0757L7.29218 11.6818C6.48269 9.79294 6.07794 8.84853 6.52255 8.17426C6.96715 7.5 7.99464 7.5 10.0496 7.5H15.3305C17.6295 7.5 18.779 7.5 19.2126 8.24711C19.6462 8.99422 19.0758 9.99229 17.9352 11.9884L17.6517 12.4846C17.0897 13.4679 16.8088 13.9596 16.3432 14.2298C15.8776 14.5 15.3113 14.5 14.1787 14.5Z" stroke="#222222" stroke-linecap="round" fill="#fff"/>
+                        <circle cx="17" cy="20" r="1" fill="#222222"/>
+                        <circle cx="9" cy="20" r="1" fill="#222222"/>
+                    </svg>
+                    <div class="header__basket-num">1</div>
+                </div>
+                <button class="btn btn-outline-dark fw-bold header__login-btn" data-bs-toggle="modal" data-bs-target="#loginModal">Войти</button>
+                <div class="profile d-none">
+                    <div class="dropdown">
+                        <svg class="profile__icon dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 18.86H17.24C16.44 18.86 15.68 19.17 15.12 19.73L13.41 21.42C12.63 22.19 11.36 22.19 10.58 21.42L8.87 19.73C8.31 19.17 7.54 18.86 6.75 18.86H6C4.34 18.86 3 17.53 3 15.89V4.97998C3 3.33998 4.34 2.01001 6 2.01001H18C19.66 2.01001 21 3.33998 21 4.97998V15.89C21 17.52 19.66 18.86 18 18.86Z" stroke="#292D32" stroke-width="1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M11.9999 10.0001C13.2868 10.0001 14.33 8.95687 14.33 7.67004C14.33 6.38322 13.2868 5.34009 11.9999 5.34009C10.7131 5.34009 9.66992 6.38322 9.66992 7.67004C9.66992 8.95687 10.7131 10.0001 11.9999 10.0001Z" stroke="#292D32" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 15.6601C16 13.8601 14.21 12.4001 12 12.4001C9.79 12.4001 8 13.8601 8 15.6601" stroke="#292D32" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <ul class="dropdown-menu">
+                            <li class="d-flex mx-3 align-items-center mb-2">
+                                <div class="me-2 profile__label">AA</div>
+                                <div>
+                                    <div class="fw-bold profile__name">Артем Артем</div>
+                                    <div class="profile__email">artem@gmail.com</div>
+                                </div>
+                            </li>
+                            <hr class="m-0">
+                            <li><a class="dropdown-item" href="#">Заказы</a></li>
+                            <li><a class="dropdown-item" href="#">Возвраты</a></li>
+                            <li><a class="dropdown-item" href="#">Мои данные</a></li>
+                            <li><a class="dropdown-item" href="#">Выйти</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- header navs -->
+        <div class="head-nav py-2 cust-container d-flex flex-wrap justify-content-start align-items-center">
+            <a href="#" class="head-nav__item pe-4" data-nav-item="1">Новинки</a>
+            <a href="#" class="head-nav__item pe-4" data-nav-item="2">Девочкам</a>
+            <a href="#" class="head-nav__item pe-4" data-nav-item="3">Женщинам</a>
+            <a href="#" class="head-nav__item pe-4" data-nav-item="4">Мужчинам</a>
+            <a href="#" class="head-nav__item pe-4" data-nav-item="5">Девочкам</a>
+            <a href="#" class="head-nav__item pe-4" data-nav-item="6">Девочкам</a>
+            <a href="#" class="head-nav__item pe-4" data-nav-item="6">Девочкам</a>
+        </div>
+        <div class="head-nav__content">
+            <div class="cust-container py-4">
+                <div class="head-nav__hero" data-nav-content="1">
+                    <div class="head-nav__col">
+                        <a href="#" class="head-nav__content-head mb-2">Одежда</a>
+                        <a href="#" class="head-nav__content-item">Одежда</a>
+                        <a href="#" class="head-nav__content-item">Обувь</a>
+                        <a href="#" class="head-nav__content-item">Аксессуары</a>
+                        <a href="#" class="head-nav__content-item">Прочее</a>
+                        <a href="#" class="head-nav__content-item">Аксессуары</a>
+                        <a href="#" class="head-nav__content-item">Прочее</a>
+                    </div>
+                    <div class="head-nav__col">
+                        <a href="#" class="head-nav__content-head mb-2">Обувь</a>
+                        <a href="#" class="head-nav__content-item">Одежда</a>
+                        <a href="#" class="head-nav__content-item">Обувь</a>
+                        <a href="#" class="head-nav__content-item">Аксессуары</a>
+                        <a href="#" class="head-nav__content-item">Прочее</a>
+                    </div>
+                </div>
+                <div class="head-nav__hero" data-nav-content="2">
+                    <div class="head-nav__col">
+                        <div class="head-nav__content-head mb-2">Одежда2</div>
+                        <div class="head-nav__content-item">Одежда</div>
+                        <div class="head-nav__content-item">Обувь</div>
+                        <div class="head-nav__content-item">Аксессуары</div>
+                        <div class="head-nav__content-item">Прочее</div>
+                    </div>
+                    <div class="head-nav__col">
+                        <div class="head-nav__content-head mb-2">Обувь2</div>
+                        <div class="head-nav__content-item">Одежда</div>
+                        <div class="head-nav__content-item">Обувь</div>
+                        <div class="head-nav__content-item">Аксессуары</div>
+                        <div class="head-nav__content-item">Прочее</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <section class="section">
+            <div class="cust-container">
+                <!-- Мои заказы -->
+                <h2 id="my-orders">Мои заказы</h2>
+                <div class="row d-flex pb-3">
+                    <a href="./product.html" class="basket__img-link">
+                        <img src="./assets/popular/1.jpg" alt="img">
+                    </a>
+                    <div class="basket__about">
+                        <div class="fw-bold mb-2">Куртка супер крутого бренда</div>
+                        <div class="mb-2">Размер: <span>54</span></div>
+                        <div class="mb-2">Количество: <span>1</span></div>
+                        <div class="mb-2">Цена: <strong><span>1000</span>₽</strong></div>
+                        <div class="mb-2 d-flex align-items-center">Статус: <span class="px-2">В пути</span></strong>
+                            <button class="btn btn-outline-danger">Отменить</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex pb-3">
+                    <a href="./product.html" class="basket__img-link">
+                        <img src="./assets/popular/1.jpg" alt="img">
+                    </a>
+                    <div class="basket__about">
+                        <div class="fw-bold mb-2">Куртка супер крутого бренда</div>
+                        <div class="mb-2">Размер: <span>54</span></div>
+                        <div class="mb-2">Количество: <span>1</span></div>
+                        <div class="mb-2">Цена: <strong><span>1000</span>₽</strong></div>
+                        <div class="mb-2 d-flex align-items-center">Статус: <span class="px-2">Получено</span></strong>
+                            <button class="btn btn-outline-danger d-none">Отменить</button>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-outline-dark d-block m-auto px-5">Еще</button>
+
+                <hr>
+                <!-- Возвраты -->
+                <h2>Возвраты</h2>
+                <div class="row d-flex pb-3">
+                    <a href="./product.html" class="basket__img-link">
+                        <img src="./assets/popular/1.jpg" alt="img">
+                    </a>
+                    <div class="basket__about">
+                        <div class="fw-bold mb-2">Куртка супер крутого бренда</div>
+                        <div class="mb-2">Размер: <span>54</span></div>
+                        <div class="mb-2">Количество: <span>1</span></div>
+                        <div class="mb-2">Цена: <strong><span>1000</span>₽</strong></div>
+                        <div class="mb-2">Статус: <span>Вернули</span></strong></div>
+                    </div>
+                </div>
+
+                <hr>
+                <!-- Мои данные -->
+                <h2>Мои данные</h2>
+                <!-- мои данные: имя -->
+                <div class="input-group mb-3 my-info__input-wrap">
+                    <span class="input-group-text">
+                        <svg class="modal-input-icon" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 5C10.3431 5 9 6.34315 9 8C9 9.65685 10.3431 11 12 11C13.6569 11 15 9.65685 15 8C15 6.34315 13.6569 5 12 5ZM7 8C7 5.23858 9.23858 3 12 3C14.7614 3 17 5.23858 17 8C17 10.7614 14.7614 13 12 13C9.23858 13 7 10.7614 7 8ZM7.45609 16.7264C6.40184 17.1946 6 17.7858 6 18.5C6 18.7236 6.03976 18.8502 6.09728 18.942C6.15483 19.0338 6.29214 19.1893 6.66219 19.3567C7.45312 19.7145 9.01609 20 12 20C14.9839 20 16.5469 19.7145 17.3378 19.3567C17.7079 19.1893 17.8452 19.0338 17.9027 18.942C17.9602 18.8502 18 18.7236 18 18.5C18 17.7858 17.5982 17.1946 16.5439 16.7264C15.4614 16.2458 13.8722 16 12 16C10.1278 16 8.53857 16.2458 7.45609 16.7264ZM6.64442 14.8986C8.09544 14.2542 10.0062 14 12 14C13.9938 14 15.9046 14.2542 17.3556 14.8986C18.8348 15.5554 20 16.7142 20 18.5C20 18.9667 19.9148 19.4978 19.5973 20.0043C19.2798 20.5106 18.7921 20.8939 18.1622 21.1789C16.9531 21.7259 15.0161 22 12 22C8.98391 22 7.04688 21.7259 5.83781 21.1789C5.20786 20.8939 4.72017 20.5106 4.40272 20.0043C4.08524 19.4978 4 18.9667 4 18.5C4 16.7142 5.16516 15.5554 6.64442 14.8986Z" fill="#0F1729"/>
+                        </svg>
+                    </span>
+                    <input id="nameInput" type="text" class="form-control my-info__input" placeholder="Имя" aria-label="Username" aria-describedby="basic-addon1" readonly value="Artem Artem">
+                    <button id="nameInputBtn" class="btn px-1 my-info__action-btn">
+                        <svg class="edit-icon" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="m3.99 16.854-1.314 3.504a.75.75 0 0 0 .966.965l3.503-1.314a3 3 0 0 0 1.068-.687L18.36 9.175s-.354-1.061-1.414-2.122c-1.06-1.06-2.122-1.414-2.122-1.414L4.677 15.786a3 3 0 0 0-.687 1.068zm12.249-12.63 1.383-1.383c.248-.248.579-.406.925-.348.487.08 1.232.322 1.934 1.025.703.703.945 1.447 1.025 1.934.058.346-.1.677-.348.925L19.774 7.76s-.353-1.06-1.414-2.12c-1.06-1.062-2.121-1.415-2.121-1.415z" fill="#ffc107"/>
+                        </svg>
+                        <svg class="save-icon" width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                            <path stroke="#198754" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.828a2 2 0 0 0-.586-1.414l-1.828-1.828A2 2 0 0 0 16.172 4H15M8 4v4a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V4M8 4h7M7 17v-3a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v3"/>
+                        </svg>
+                    </button>
+                </div>
+                <!-- мои данные: почта -->
+                <div class="input-group mb-3 my-info__input-wrap">
+                    <span class="input-group-text">
+                        <svg class="modal-input-icon" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12ZM16 12V13.5C16 14.8807 17.1193 16 18.5 16V16C19.8807 16 21 14.8807 21 13.5V12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21H16" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </span>
+                    <input id="emailInput" type="email" class="form-control my-info__input" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1" readonly value="artem@gmail.com">
+                    <button id="emailInputBtn" class="btn px-1 my-info__action-btn" data-editing="false">
+                        <svg class="edit-icon" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="m3.99 16.854-1.314 3.504a.75.75 0 0 0 .966.965l3.503-1.314a3 3 0 0 0 1.068-.687L18.36 9.175s-.354-1.061-1.414-2.122c-1.06-1.06-2.122-1.414-2.122-1.414L4.677 15.786a3 3 0 0 0-.687 1.068zm12.249-12.63 1.383-1.383c.248-.248.579-.406.925-.348.487.08 1.232.322 1.934 1.025.703.703.945 1.447 1.025 1.934.058.346-.1.677-.348.925L19.774 7.76s-.353-1.06-1.414-2.12c-1.06-1.062-2.121-1.415-2.121-1.415z" fill="#ffc107"/>
+                        </svg>
+                        <svg class="save-icon" width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+                            <path stroke="#198754" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 4H6a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.828a2 2 0 0 0-.586-1.414l-1.828-1.828A2 2 0 0 0 16.172 4H15M8 4v4a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V4M8 4h7M7 17v-3a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v3"/>
+                        </svg>
+                    </button>
+                </div>
+                <!-- мои данные: пароль -->
+                <div id="changePasswordLink" class="my-info__password-link mb-2">Изменить пароль</div>
+                <div id="changePassordHero" class="d-none">
+                    <div class="input-group mb-3 my-info__input-wrap">
+                        <span class="input-group-text">
+                            <svg class="modal-input-icon" fill="#000000" width="800px" height="800px" viewBox="0 0 32 32" id="icon" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21,2a8.9977,8.9977,0,0,0-8.6119,11.6118L2,24v6H8L18.3881,19.6118A9,9,0,1,0,21,2Zm0,16a7.0125,7.0125,0,0,1-2.0322-.3022L17.821,17.35l-.8472.8472-3.1811,3.1812L12.4141,20,11,21.4141l1.3787,1.3786-1.5859,1.586L9.4141,23,8,24.4141l1.3787,1.3786L7.1716,28H4V24.8284l9.8023-9.8023.8472-.8474-.3473-1.1467A7,7,0,1,1,21,18Z"/>
+                                <circle cx="22" cy="10" r="2"/>
+                                <rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" fill="none" width="32" height="32"/>
+                            </svg>
+                        </span>
+                        <input id="oldPassword" type="password" class="form-control my-info__input" placeholder="Старый пароль" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3 my-info__input-wrap">
+                        <span class="input-group-text">
+                            <svg class="modal-input-icon" fill="#000000" width="800px" height="800px" viewBox="0 0 32 32" id="icon" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21,2a8.9977,8.9977,0,0,0-8.6119,11.6118L2,24v6H8L18.3881,19.6118A9,9,0,1,0,21,2Zm0,16a7.0125,7.0125,0,0,1-2.0322-.3022L17.821,17.35l-.8472.8472-3.1811,3.1812L12.4141,20,11,21.4141l1.3787,1.3786-1.5859,1.586L9.4141,23,8,24.4141l1.3787,1.3786L7.1716,28H4V24.8284l9.8023-9.8023.8472-.8474-.3473-1.1467A7,7,0,1,1,21,18Z"/>
+                                <circle cx="22" cy="10" r="2"/>
+                                <rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" fill="none" width="32" height="32"/>
+                            </svg>
+                        </span>
+                        <input id="newPassword" type="password" class="form-control my-info__input" placeholder="Новый пароль" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3 my-info__input-wrap">
+                        <span class="input-group-text">
+                            <svg class="modal-input-icon" fill="#000000" width="800px" height="800px" viewBox="0 0 32 32" id="icon" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21,2a8.9977,8.9977,0,0,0-8.6119,11.6118L2,24v6H8L18.3881,19.6118A9,9,0,1,0,21,2Zm0,16a7.0125,7.0125,0,0,1-2.0322-.3022L17.821,17.35l-.8472.8472-3.1811,3.1812L12.4141,20,11,21.4141l1.3787,1.3786-1.5859,1.586L9.4141,23,8,24.4141l1.3787,1.3786L7.1716,28H4V24.8284l9.8023-9.8023.8472-.8474-.3473-1.1467A7,7,0,1,1,21,18Z"/>
+                                <circle cx="22" cy="10" r="2"/>
+                                <rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" fill="none" width="32" height="32"/>
+                            </svg>
+                        </span>
+                        <input id="repeatNewPassword" type="password" class="form-control my-info__input" placeholder="Повторите новый пароль" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <div id="passwordError" class="input-error mb-3 d-none">Пароли не совпадают</div>
+                    <button id="changePasswordBtn" class="btn btn-outline-dark">Сохранить пароль</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer py-4">
+        <div class="cust-container d-flex flex-wrap justify-content-between">
+            <div class="footer__col footer__list">
+                <div class="footer__name mb-2">Помощь</div>
+                <div class="footer__item">Как оформить заказ?</div>
+                <div class="footer__item">Как выбрать размер?</div>
+                <div class="footer__item">Мои заказы</div>
+                <div class="footer__item">Возврат</div>
+                <div class="footer__item">Публичная оферта</div>
+                <div class="footer__item">Часто задаваемые вопросы</div>
+            </div>
+            <div class="footer__col footer__logo-wrap">
+                <div class="footer__logo text-center">Market</div>
+            </div>
+            <div class="footer__col footer__about-wrap">
+                <div class="footer__name mb-2 footer__about">О нас</div>
+                <a href="#" class="footer__social">
+                    <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 11C3 7.22876 3 5.34315 4.17157 4.17157C5.34315 3 7.22876 3 11 3H13C16.7712 3 18.6569 3 19.8284 4.17157C21 5.34315 21 7.22876 21 11V13C21 16.7712 21 18.6569 19.8284 19.8284C18.6569 21 16.7712 21 13 21H11C7.22876 21 5.34315 21 4.17157 19.8284C3 18.6569 3 16.7712 3 13V11Z" stroke="#fff" stroke-width="2"/>
+                        <circle class="point" cx="16.5" cy="7.5" r="1.5" fill="#fff"/>
+                        <circle cx="12" cy="12" r="3" stroke="#fff" stroke-width="2"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modals -->
+    <!-- select city -->
+    <div class="modal fade" id="selectCityModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">Где Вы находитесь?</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">
+                            <svg class="modal-input-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.1819 10.1818C20.1819 16.5455 12.0001 22 12.0001 22C12.0001 22 3.81824 16.5455 3.81824 10.1818C3.81824 8.01187 4.68025 5.93079 6.21464 4.3964C7.74902 2.86201 9.8301 2 12.0001 2C14.17 2 16.2511 2.86201 17.7855 4.3964C19.3199 5.93079 20.1819 8.01187 20.1819 10.1818Z" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M12.0001 12.9091C13.5063 12.9091 14.7274 11.688 14.7274 10.1818C14.7274 8.67559 13.5063 7.45454 12.0001 7.45454C10.4939 7.45454 9.27283 8.67559 9.27283 10.1818C9.27283 11.688 10.4939 12.9091 12.0001 12.9091Z" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        <input id="selectedCity" type="text" class="form-control modalInput" placeholder="Город" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <ul class="d-flex flex-wrap align-items-center px-0 cities-list">
+                        <li class="py-1 px-2 px-sm-3 city-item">г. Москва</li>
+                        <li class="py-1 px-2 px-sm-3 city-item">г. Санкт-Петербург</li>
+                        <li class="py-1 px-2 px-sm-3 city-item">г. Севастополь</li>
+                        <li class="py-1 px-2 px-sm-3 city-item">г. Ростов-на-Дону</li>
+                        <li class="py-1 px-2 px-sm-3 city-item">г. Таганрог</li>
+                        <li class="py-1 px-2 px-sm-3 city-item">г. Сочи</li>
+                        <li class="py-1 px-2 px-sm-3 city-item">г. Уфа</li>
+                        <li class="py-1 px-2 px-sm-3 city-item">г. Новороссийск</li>
+                        <li class="py-1 px-2 px-sm-3 city-item">г. Туапсе</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- login -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">Добро пожаловать</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">
+                            <svg class="modal-input-icon" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 5C10.3431 5 9 6.34315 9 8C9 9.65685 10.3431 11 12 11C13.6569 11 15 9.65685 15 8C15 6.34315 13.6569 5 12 5ZM7 8C7 5.23858 9.23858 3 12 3C14.7614 3 17 5.23858 17 8C17 10.7614 14.7614 13 12 13C9.23858 13 7 10.7614 7 8ZM7.45609 16.7264C6.40184 17.1946 6 17.7858 6 18.5C6 18.7236 6.03976 18.8502 6.09728 18.942C6.15483 19.0338 6.29214 19.1893 6.66219 19.3567C7.45312 19.7145 9.01609 20 12 20C14.9839 20 16.5469 19.7145 17.3378 19.3567C17.7079 19.1893 17.8452 19.0338 17.9027 18.942C17.9602 18.8502 18 18.7236 18 18.5C18 17.7858 17.5982 17.1946 16.5439 16.7264C15.4614 16.2458 13.8722 16 12 16C10.1278 16 8.53857 16.2458 7.45609 16.7264ZM6.64442 14.8986C8.09544 14.2542 10.0062 14 12 14C13.9938 14 15.9046 14.2542 17.3556 14.8986C18.8348 15.5554 20 16.7142 20 18.5C20 18.9667 19.9148 19.4978 19.5973 20.0043C19.2798 20.5106 18.7921 20.8939 18.1622 21.1789C16.9531 21.7259 15.0161 22 12 22C8.98391 22 7.04688 21.7259 5.83781 21.1789C5.20786 20.8939 4.72017 20.5106 4.40272 20.0043C4.08524 19.4978 4 18.9667 4 18.5C4 16.7142 5.16516 15.5554 6.64442 14.8986Z" fill="#0F1729"/>
+                            </svg>
+                        </span>
+                        <input type="text" class="form-control modalInput" placeholder="Логин" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">
+                            <svg class="modal-input-icon" fill="#000000" width="800px" height="800px" viewBox="0 0 32 32" id="icon" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21,2a8.9977,8.9977,0,0,0-8.6119,11.6118L2,24v6H8L18.3881,19.6118A9,9,0,1,0,21,2Zm0,16a7.0125,7.0125,0,0,1-2.0322-.3022L17.821,17.35l-.8472.8472-3.1811,3.1812L12.4141,20,11,21.4141l1.3787,1.3786-1.5859,1.586L9.4141,23,8,24.4141l1.3787,1.3786L7.1716,28H4V24.8284l9.8023-9.8023.8472-.8474-.3473-1.1467A7,7,0,1,1,21,18Z"/>
+                                <circle cx="22" cy="10" r="2"/>
+                                <rect id="_Transparent_Rectangle_" data-name="&lt;Transparent Rectangle&gt;" fill="none" width="32" height="32"/>
+                            </svg>
+                        </span>
+                        <input type="password" class="form-control modalInput" placeholder="Пароль" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                        <a href="" class="fw-bold modal-link">Еще нет аккауна?</a>
+                        <a href="" class="fw-bold modal-link">Забыли пароль</a>
+                    </div>
+                    <button id="loginBtn" class="btn btn-outline-dark fw-bold d-block m-auto">Войти</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- script -->
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery.slim.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/carousel-settings.js"></script>
+    <script src="./js/header.js"></script>
+    <script src="./js/infoPage.js"></script>
+</body>
+</html>
