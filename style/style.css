@@ -929,6 +929,7 @@ body {
   -webkit-transition: color .3s ease;
   transition: color .3s ease;
   padding: 3px 0;
+  color: #fff;
 }
 
 .footer__item:hover {
@@ -978,6 +979,11 @@ body {
 
 .footer__social:hover svg circle.point {
   fill: #bfbfbf;
+}
+
+a.footer__item {
+  color: #fff;
+  display: block;
 }
 
 @media screen and (max-width: 768px) {
