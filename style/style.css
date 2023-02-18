@@ -1572,3 +1572,27 @@ a.footer__item {
 .my-info__password-link:hover {
   border-bottom: 1px solid #fff;
 }
+
+.offer ol {
+  list-style: none;
+  counter-reset: li;
+}
+
+.offer li {
+  padding: 10px 0;
+}
+
+.offer li.offer__pretitle:before {
+  font-weight: 600;
+  font-size: 28px;
+}
+
+.offer li:before {
+  counter-increment: li;
+  content: counters(li, ".") ". ";
+}
+
+.offer__title {
+  font-weight: 600;
+  font-size: 28px;
+}

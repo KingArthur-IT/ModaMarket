@@ -1,0 +1,15 @@
+.offer
+    & ol
+        list-style: none
+        counter-reset: li
+    & li
+        padding: 10px 0
+        &.offer__pretitle:before
+            font-weight: 600
+            font-size: 28px
+    & li:before
+        counter-increment: li
+        content: counters(li, ".") ". "
+    &__title
+        font-weight: 600
+        font-size: 28px
