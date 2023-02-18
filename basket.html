@@ -155,13 +155,13 @@
                                     <div class="mb-3">Размер <span>54</span></div>
                                     <!-- num count btns -->
                                     <div class="d-flex align-items-center mb-3">
-                                        <button class="btn btn-outline-dark px-1 basket__num-btn">
+                                        <button class="btn btn-outline-dark px-1 basket__num-btn" data-increment="false" data-prod-id="1">
                                             <svg class="basket__num-btn-icon" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M7 12L17 12" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                         </button>
-                                        <div class="px-3 py-2">1</div>
-                                        <button class="btn btn-outline-dark px-1 basket__num-btn">
+                                        <div data-prod-id="1" class="px-3 py-2 product__count">1</div>
+                                        <button class="btn btn-outline-dark px-1 basket__num-btn" data-increment="true" data-prod-id="1">
                                             <svg class="basket__num-btn-icon" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M12 7V17M7 12H17" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
@@ -169,9 +169,9 @@
                                     </div>
                                     <!-- price -->
                                     <div class="price d-flex align-items-center mb-2">
-                                        <div class="price__old overlined"><span class="me-1">1 000</span>₽</div>
-                                        <div class="price__new ms-2"><span class="me-1">700</span>₽</div>
-                                        <div class="price__label p-1 ms-2">-20%</div>
+                                        <div class="price__old overlined"><span class="me-1">1000</span>₽</div>
+                                        <div class="price__new ms-2"><span class="me-1">800</span>₽</div>
+                                        <div class="price__label p-1 ms-2">-<span>20</span>%</div>
                                     </div>
                                 </div>
                                 <div>
@@ -202,13 +202,13 @@
                                     <div class="mb-3">Размер <span>54</span></div>
                                     <!-- num count btns -->
                                     <div class="d-flex align-items-center mb-3">
-                                        <button class="btn btn-outline-dark px-1 basket__num-btn">
+                                        <button class="btn btn-outline-dark px-1 basket__num-btn" data-increment="false" data-prod-id="2">
                                             <svg class="basket__num-btn-icon" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M7 12L17 12" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
                                         </button>
-                                        <div class="px-3 py-2">1</div>
-                                        <button class="btn btn-outline-dark px-1 basket__num-btn">
+                                        <div data-prod-id="2" class="px-3 py-2 product__count">1</div>
+                                        <button class="btn btn-outline-dark px-1 basket__num-btn" data-increment="true" data-prod-id="2">
                                             <svg class="basket__num-btn-icon" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M12 7V17M7 12H17" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                             </svg>
@@ -216,9 +216,9 @@
                                     </div>
                                     <!-- price -->
                                     <div class="price d-flex align-items-center mb-2">
-                                        <div class="price__old overlined"><span class="me-1">1 000</span>₽</div>
+                                        <div class="price__old overlined"><span class="me-1">1000</span>₽</div>
                                         <div class="price__new ms-2"><span class="me-1">700</span>₽</div>
-                                        <div class="price__label p-1 ms-2">-20%</div>
+                                        <div class="price__label p-1 ms-2">-<span>30</span>%</div>
                                     </div>
                                 </div>
                                 <div>
@@ -242,26 +242,86 @@
                     </div>
                     <!-- resume card -->
                     <div class="col-5">
+                        <!-- Сумма заказа -->
                         <div class="card basket__card p-3 mb-3">
                             <h4 class="mb-2">Сумма заказа</h4>
                             <div class="d-flex align-items-center justify-content-between">
-                                <div>1 товар на сумму</div>
-                                <div class="fw-bold"><span>1000</span> ₽</div>
+                                <div id="basket-prod-count">Товаров: <span>1</span> на сумму</div>
+                                <div id="basket-prod-summ" class="fw-bold"><span>1000</span> ₽</div>
                             </div>
                             <div class="d-flex align-items-center justify-content-between">
                                 <div>Скидка:</div>
-                                <div class="fw-bold">-<span>200</span> ₽</div>
+                                <div id="basket-prod-discount" class="fw-bold">-<span>200</span> ₽</div>
                             </div>
                             <hr>
                             <div class="d-flex align-items-center justify-content-between mb-2">
                                 <div>Итого:</div>
-                                <div class="fw-bold"><span>800</span> ₽</div>
+                                <div id="basket-prod-total" class="fw-bold"><span>800</span> ₽</div>
                             </div>
-                            <button class="btn btn-outline-dark">Оформить</button>
+                            <button id="preOrderBtn" class="btn btn-outline-dark">Оформить</button>
                         </div>
-                        <div class="card basket__card p-3">
+                        <!-- Контактные данные -->
+                        <div id="contactsDataCard" class="card basket__card p-3 d-none">
                             <h4 class="mb-2">Контактные данные</h4>
-                            <button class="btn btn-outline-dark">Заказать</button>
+                            <!-- name -->
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">
+                                    <svg class="modal-input-icon" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M17.5 21.0001H6.5C5.11929 21.0001 4 19.8808 4 18.5001C4 14.4194 10 14.5001 12 14.5001C14 14.5001 20 14.4194 20 18.5001C20 19.8808 18.8807 21.0001 17.5 21.0001Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12 11C14.2091 11 16 9.20914 16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7C8 9.20914 9.79086 11 12 11Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                                <input id="nameOrder" type="text" class="form-control modalInput" placeholder="Ваше имя" aria-label="Email" aria-describedby="basic-addon1">
+                            </div>
+                            <!-- email -->
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">
+                                    <svg class="modal-input-icon" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12ZM16 12V13.5C16 14.8807 17.1193 16 18.5 16V16C19.8807 16 21 14.8807 21 13.5V12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21H16" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                                <input id="emailOrder" type="email" class="form-control modalInput" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1">
+                            </div>
+                            <!-- tel -->
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">
+                                    <svg class="modal-input-icon" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.9995 19.1864V16.4767C21.0105 16.0337 20.858 15.6021 20.5709 15.264C19.7615 14.3106 16.9855 13.7008 15.8851 13.935C15.0274 14.1176 14.4272 14.9788 13.8405 15.5644C11.5747 14.2785 9.69864 12.4062 8.41026 10.1448C8.99696 9.55929 9.85994 8.96036 10.0429 8.10428C10.2772 7.00777 9.66819 4.24949 8.72138 3.43684C8.38835 3.151 7.96253 2.99577 7.52331 3.00009H4.80817C3.77364 3.00106 2.91294 3.92895 3.00713 4.96919C3.00006 13.935 10.0001 21 19.0265 20.9929C20.0723 21.0873 21.0037 20.2223 20.9995 19.1864Z" stroke="#000000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                                <input id="telOrder" type="text" class="form-control modalInput" aria-label="Email" aria-describedby="basic-addon1" placeholder="Ваш номер телефона" oninput="this.value = this.value.replace(/[^0-9-+]/g, '').replace(/(\..*?)\..*/g, '$1');">
+                            </div>
+                            <!-- Адрес -->
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">
+                                    <svg class="modal-input-icon" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M20.1819 10.1818C20.1819 16.5455 12.0001 22 12.0001 22C12.0001 22 3.81824 16.5455 3.81824 10.1818C3.81824 8.01187 4.68025 5.93079 6.21464 4.3964C7.74902 2.86201 9.8301 2 12.0001 2C14.17 2 16.2511 2.86201 17.7855 4.3964C19.3199 5.93079 20.1819 8.01187 20.1819 10.1818Z" stroke="#200E32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M12.0001 12.9091C13.5063 12.9091 14.7274 11.688 14.7274 10.1818C14.7274 8.67559 13.5063 7.45454 12.0001 7.45454C10.4939 7.45454 9.27283 8.67559 9.27283 10.1818C9.27283 11.688 10.4939 12.9091 12.0001 12.9091Z" stroke="#200E32" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                                <input id="adressOrder" type="text" class="form-control modalInput" placeholder="Адрес" aria-label="Email" aria-describedby="basic-addon1">
+                            </div>
+                            <!-- Комментарий -->
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">
+                                    <svg class="modal-input-icon" width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_429_11106)">
+                                            <path d="M12 21C16.9706 21 21 16.9705 21 12C21 7.02941 16.9706 2.99997 12 2.99997C7.02944 2.99997 3 7.02941 3 12C3 13.4876 3.36093 14.8909 4 16.1272L3 21L7.8728 20C9.10904 20.639 10.5124 21 12 21Z" stroke="#292929" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <rect x="7.5" y="12" width="0.01" height="0.01" stroke="#292929" stroke-width="3.75" stroke-linejoin="round"/>
+                                            <rect x="12" y="12" width="0.01" height="0.01" stroke="#292929" stroke-width="3.75" stroke-linejoin="round"/>
+                                            <rect x="16.5" y="12" width="0.01" height="0.01" stroke="#292929" stroke-width="3.75" stroke-linejoin="round"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_429_11106">
+                                                <rect width="24" height="24" fill="white"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </span>
+                                <textarea id="commentOrder" class="form-control modalInput" placeholder="Ваш комментарий" cols="10" rows="1"></textarea>
+                            </div>
+                            <div id="errorOrder" class="input-error mb-3 d-none"></div>
+                            <button id="orderBtn" class="btn btn-outline-dark">Заказать</button>
                         </div>
                     </div>
                 </div>
@@ -536,6 +596,23 @@
             </div>
         </div>
     </div>
+    <!-- order success -->
+    <div class="modal fade" id="successOrderModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">Заказ оформлен</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <svg class="basket__success-icon m-auto d-block mb-2" width="800px" height="800px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#198754" d="M512 64a448 448 0 1 1 0 896 448 448 0 0 1 0-896zm-55.808 536.384-99.52-99.584a38.4 38.4 0 1 0-54.336 54.336l126.72 126.72a38.272 38.272 0 0 0 54.336 0l262.4-262.464a38.4 38.4 0 1 0-54.272-54.336L456.192 600.384z"/>
+                    </svg>
+                    <h1 class="modal-title fs-5 text-center mb-3">Ваш заказ успешно оформлен!</h1>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <!-- script -->
     <script src="./js/bootstrap.min.js"></script>
@@ -543,6 +620,6 @@
     <script src="./js/owl.carousel.min.js"></script>
     <script src="./js/carousel-settings.js"></script>
     <script src="./js/header.js"></script>
-    <script src="./js/product.js"></script>
+    <script src="./js/basket.js"></script>
 </body>
 </html>

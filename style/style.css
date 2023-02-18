@@ -1477,12 +1477,19 @@ a.product__basket-btn {
 }
 
 .basket__favourite:hover svg {
-  fill: red;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
 .basket__favourite:hover svg path {
+  stroke: red;
+}
+
+.basket__favourite.active svg {
+  fill: red;
+}
+
+.basket__favourite.active svg path {
   stroke: red;
 }
 
@@ -1505,6 +1512,11 @@ a.product__basket-btn {
   -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.16);
           box-shadow: 0 0 8px rgba(0, 0, 0, 0.16);
   border: none;
+}
+
+.basket__success-icon {
+  width: 60px;
+  height: 60px;
 }
 
 .my-info__input-wrap {

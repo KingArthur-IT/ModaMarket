@@ -50,10 +50,14 @@
             transition: all .3s ease
             transform: scale(1)
         &:hover svg
-            fill: red
             transform: scale(1.1)
             & path
                 stroke: red
+        &.active
+            & svg
+                fill: red
+                & path
+                    stroke: red
     &__trash
         cursor: pointer
         & svg
@@ -66,3 +70,6 @@
     &__card
         box-shadow: 0 0 8px rgba(0, 0, 0, .16)
         border: none
+    &__success-icon
+        width: 60px
+        height: 60px
