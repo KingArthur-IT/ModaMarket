@@ -1211,6 +1211,10 @@ a.footer__item {
   fill: #fff;
 }
 
+a.product__basket-btn {
+  color: #fff;
+}
+
 @media screen and (max-width: 600px) {
   .product__arrow {
     padding: 4px 8px;
