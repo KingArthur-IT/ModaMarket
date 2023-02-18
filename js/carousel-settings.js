@@ -80,3 +80,17 @@ $(document).ready(function(){
         }
     });
 });
+
+document.querySelectorAll('.slider__favourite').forEach(fav => {
+  fav.addEventListener('click', (e) => {
+    e.preventDefault()
+    fav.classList.toggle('active')
+  })
+});
+
+document.querySelectorAll('.catalog__favourite').forEach(fav => {
+  fav.addEventListener('click', (e) => {
+    e.preventDefault()
+    fav.classList.toggle('active')
+  })
+})

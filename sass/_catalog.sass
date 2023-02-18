@@ -35,8 +35,6 @@
                 opacity: 1
             & .catalog__image img
                 transform: scale(1.05)
-        &.favorite .catalog__favourite
-            fill: red
     &__image
         position: relative
         overflow: hidden
@@ -54,8 +52,13 @@
         transition: transform .3s ease
         transform: scale(1)
         &:hover
-            fill: red
             transform: scale(1.1)
+            & path
+                stroke: red
+        &.active
+            & path
+                fill: red
+                stroke: red
     &__label
         position: absolute
         top: 0

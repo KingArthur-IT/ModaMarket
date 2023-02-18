@@ -610,10 +610,6 @@ button.accordion-button:focus::after {
           transform: scale(1.05);
 }
 
-.slider__card.favorite .slider__favourite {
-  fill: red;
-}
-
 .slider__image {
   position: relative;
   overflow: hidden;
@@ -643,9 +639,13 @@ button.accordion-button:focus::after {
 }
 
 .slider__favourite:hover {
-  fill: red;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.slider__favourite.active path {
+  fill: red;
+  stroke: red;
 }
 
 .slider__label {
@@ -1207,8 +1207,16 @@ a.footer__item {
   height: 25px;
 }
 
-.product__favourite-btn:hover svg {
-  fill: #fff;
+.product__favourite-btn:hover svg path {
+  stroke: #fff;
+}
+
+.product__favourite-btn.active svg {
+  fill: red;
+}
+
+.product__favourite-btn.active svg path {
+  stroke: red;
 }
 
 a.product__basket-btn {
@@ -1314,10 +1322,6 @@ a.product__basket-btn {
           transform: scale(1.05);
 }
 
-.catalog__card.favorite .catalog__favourite {
-  fill: red;
-}
-
 .catalog__image {
   position: relative;
   overflow: hidden;
@@ -1349,9 +1353,17 @@ a.product__basket-btn {
 }
 
 .catalog__favourite:hover {
-  fill: red;
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.catalog__favourite:hover path {
+  stroke: red;
+}
+
+.catalog__favourite.active path {
+  fill: red;
+  stroke: red;
 }
 
 .catalog__label {

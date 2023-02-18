@@ -51,3 +51,7 @@ jQuery( document ).ready(function() {
     newwidth = jQuery('.product-carousel .owl-dot').width();
     jQuery('.product-carousel .owl-dot').css("height", newwidth+"px");
 });
+
+document.querySelector('.product__favourite-btn').addEventListener('click', (el) => {
+    document.querySelector('.product__favourite-btn').classList.toggle('active')
+})

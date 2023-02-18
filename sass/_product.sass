@@ -69,7 +69,14 @@
             height: 25px
         &:hover
             & svg
-                fill: #fff
+                & path
+                    stroke: #fff
+        &.active
+            & svg
+                fill: red
+                & path
+                    stroke: red
+
 
 a.product__basket-btn
     color: #fff
