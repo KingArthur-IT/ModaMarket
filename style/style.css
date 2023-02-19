@@ -27,6 +27,7 @@ body {
   background-color: #fff;
   overflow-x: hidden;
   color: #222222;
+  min-height: 100vh;
 }
 
 .cust-container {
@@ -1113,6 +1114,7 @@ button.accordion-button:focus::after {
   background: #222222;
   width: 100%;
   color: #fff;
+  margin-top: auto;
 }
 
 .footer__col {
