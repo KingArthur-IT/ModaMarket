@@ -1,4 +1,5 @@
-//--- navs ---
+//--------------------------------------------
+//Панель с раскрывающимся контентом в header-е
 const navItems = document.querySelectorAll('.head-nav__item')
 const navContent = document.querySelector('.head-nav__content')
 const navHero = document.querySelectorAll('.head-nav__hero')
@@ -17,8 +18,8 @@ navContent.addEventListener('mouseleave', () => navContent.classList.remove('act
 
 document.querySelector('.header__hero').addEventListener('mouseover', () => navContent.classList.remove('active'))
 
-
-//--- select city ---
+//--------------------------------------------
+// Модалка выбора города
 document.querySelectorAll('.city-item').forEach((el) => {
     el.addEventListener('click', () => {
         document.getElementById('myCity').innerHTML = el.innerHTML
@@ -33,6 +34,7 @@ document.querySelector('#selectedCity').addEventListener('keypress', (e) => {
     }
 });
 
+//--------------------------------------------
 //login
 const emailInput = document.querySelector('#emailLogin')
 const passwordInput = document.querySelector('#passwordLogin')
@@ -54,8 +56,8 @@ document.querySelector('#loginBtn').addEventListener('click', () => {
     }
 
     //убрать кнопку войти и показать иконку профиля
-    document.querySelector('.header__login-btn').classList.add('d-none')
-    document.querySelector('.profile').classList.remove('d-none')
+    loginVisibleEvent()
+
     //hide modal
     $('#loginModal').modal('hide');
 
@@ -64,6 +66,15 @@ document.querySelector('#loginBtn').addEventListener('click', () => {
     // document.querySelector('#useremailData').innerHTML = 'User email'
 });
 
+//проверить залогиненый ли пользователь уже
+if (localStorage.getItem('isLogin') === 'true') {
+    document.querySelector('.header__login-btn').classList.remove('visible')
+    document.querySelector('.header__login-btn').classList.add('d-none')
+    document.querySelector('.profile').classList.remove('d-none')
+    document.querySelector('.profile').classList.add('visible')
+}
+
+//--------------------------------------------
 //register
 const nameRegInput = document.querySelector('#nameRegister')
 const emailRegInput = document.querySelector('#emailRegister')
@@ -96,8 +107,7 @@ document.querySelector('#registerBtn').addEventListener('click', () => {
     }
 
     //убрать кнопку войти и показать иконку профиля
-    document.querySelector('.header__login-btn').classList.add('d-none')
-    document.querySelector('.profile').classList.remove('d-none')
+    loginVisibleEvent()
     //hide modal
     $('#registerModal').modal('hide');
 
@@ -121,6 +131,7 @@ document.querySelector('#openForgotModal').addEventListener('click', () => {
     $('#forgotPasswordModal').modal('show');
 });
 
+//--------------------------------------------
 //forgot password
 const emailForgotInput = document.querySelector('#emailForgotPass')
 const errorForgotField = document.querySelector('#forgotError')
@@ -139,8 +150,37 @@ document.querySelector('#forgotBtn').addEventListener('click', () => {
     $('#resetPasswordModal').modal('show');
 });
 
+//--------------------------------------------
 //logout
-document.querySelector('#logout').addEventListener('click', () => {
-    document.querySelector('.header__login-btn').classList.remove('d-none')
-    document.querySelector('.profile').classList.add('d-none')
+document.querySelector('#logout').addEventListener('click', logoutVisibleEvent);
+
+//--------------------------------------------
+//search in header
+document.querySelector('#headerSearchToggle').addEventListener('click', () => {
+    document.querySelector('.header__search').classList.toggle('active')
 })
+
+//--------------------------------------------
+function loginVisibleEvent() {
+    document.querySelector('.header__login-btn').classList.remove('visible')
+    setTimeout(() => {
+        document.querySelector('.header__login-btn').classList.add('d-none')
+        document.querySelector('.profile').classList.remove('d-none')
+        setTimeout(() => {
+            document.querySelector('.profile').classList.add('visible')
+        }, 200);
+    }, 300);
+    localStorage.setItem('isLogin', true)
+}
+
+function logoutVisibleEvent() {
+    document.querySelector('.profile').classList.remove('visible')
+    setTimeout(() => {
+        document.querySelector('.profile').classList.add('d-none')
+        document.querySelector('.header__login-btn').classList.remove('d-none')
+        setTimeout(() => {
+            document.querySelector('.header__login-btn').classList.add('visible')
+        }, 200);
+    }, 300);
+    localStorage.setItem('isLogin', false)
+}

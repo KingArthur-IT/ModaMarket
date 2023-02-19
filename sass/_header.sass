@@ -56,7 +56,7 @@
       transform: scale(1)
   &__logo
     font-family: 'Oswald', sans-serif
-    font-size: 48px
+    font-size: 45px
     font-weight: 700
     flex-basis: 20%
   &__right
@@ -68,12 +68,9 @@
       width: 50px
       height: 50px
       display: block
-      & path
-        transition: all .3s ease
-    &:hover
-      & svg
-        & .header__basket-fill 
-          fill: $primary
+      transition: filter .3s ease
+    &:hover svg
+      filter: brightness(0)
     &-num
       position: absolute
       width: 20px
@@ -88,6 +85,34 @@
       align-items: center
       font-size: 14px
       font-weight: 600
+  &__search
+    cursor: pointer
+    & svg
+      width: 30px
+      height: 30px
+      margin-top: 3px
+      fill: #fff
+      transition: fill .3s ease
+      &:hover
+        fill: #000
+    & .search-input
+      position: absolute
+      width: 0px
+      right: -3px
+      padding-right: 30px
+      border-color: #fff
+      transition: width .5s ease, border .5s ease
+    &.active 
+      & .search-input
+        width: 320px
+        border-color: #dee2e6
+        &:focus
+          border-color: #222
+  &__login-btn
+    opacity: 0
+    transition: opacity .3s ease
+    &.visible
+      opacity: 1
 
 @keyframes shake
   10%, 90%
@@ -108,6 +133,21 @@
     transform: translateY(-3px)
   90%
     transform: translateY(0px)
+
+@media screen and (max-width: 1140px)
+  .header
+    &__search.active .search-input
+      width: 500px
+
+@media screen and (max-width: 982px)
+  .header
+    &__search.active .search-input
+      width: 400px
+
+@media screen and (max-width: 900px)
+  .header
+    &__search.active .search-input
+      width: calc(100vw - 193px)
 
 @media screen and (max-width: 768px)
   .header
@@ -144,11 +184,21 @@
         width: 16px
         height: 16px
         font-size: 12px
+    &__search 
+      & svg
+        width: 25px
+        height: 25px
+      & .search-input
+        height: 35px
+    &__search.active .search-input
+      width: calc(100vw - 178px)
     
 @media screen and (max-width: 425px)
   .header
     &__top
       font-size: 12px
+    &__search.active .search-input
+      width: calc(100vw - 150px)
 
 @media screen and (max-width: 375px)
   .header

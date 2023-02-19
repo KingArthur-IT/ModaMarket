@@ -1,9 +1,30 @@
 .profile
+    opacity: 0
+    transition: opacity .3s ease, width .3s ease
+    width: 78px
+    &.visible
+        opacity: 1
+        width: 58px
     &__icon
-        width: 48px
-        height: 48px
-        margin-top: 3px
         cursor: pointer
+        & svg
+            width: 44px
+            height: 44px
+            transition: opacity .3s ease
+            &.hovered
+                position: absolute
+                left: 0
+                top: 0
+                bottom: 0
+                right: 0
+                opacity: 0
+        &:hover
+            & .hovered
+                opacity: 1
+            & .default
+                opacity: 0
+        &::after
+            margin-left: 0
     &__label
         background: #000
         color: #fff
