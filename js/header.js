@@ -23,6 +23,7 @@ document.querySelector('.header__hero').addEventListener('mouseover', () => navC
 document.querySelectorAll('.city-item').forEach((el) => {
     el.addEventListener('click', () => {
         document.getElementById('myCity').innerHTML = el.innerHTML
+        localStorage.setItem('city', el.innerHTML)
         $('#selectCityModal').modal('hide');
     })
 });
@@ -30,6 +31,7 @@ document.querySelectorAll('.city-item').forEach((el) => {
 document.querySelector('#selectedCity').addEventListener('keypress', (e) => {
     if (e.key === 'Enter') {
         document.getElementById('myCity').innerHTML = 'г. ' + e.target.value
+        localStorage.setItem('city', 'г. ' + e.target.value)
         $('#selectCityModal').modal('hide');
     }
 });
@@ -45,6 +47,9 @@ document.querySelector('#selectedCity').addEventListener('input', (e) => {
     } else 
         document.querySelectorAll('.city-item').forEach(cityItem => cityItem.classList.remove('d-none'))
 });
+
+if (localStorage.getItem('city'))
+    document.getElementById('myCity').innerHTML = localStorage.getItem('city')
 
 //--------------------------------------------
 //login
