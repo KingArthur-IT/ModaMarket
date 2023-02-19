@@ -15,5 +15,11 @@
     & .city-item
         cursor: pointer
         transition: color .3s ease
+        flex-basis: 33.33%
         &:hover
             color: lighten(#000, 35%)
+
+@media screen and (max-width: 992px)
+    #selectCityModal
+        & .city-item
+            flex-basis: 50%

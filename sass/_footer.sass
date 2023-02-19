@@ -26,22 +26,15 @@
         & svg
             width: 30px
             height: 30px
-            & path
-                transition: all .3s ease
-            & circle
-                transition: all .3s ease
+            transition: filter .3s ease
         &:hover
             & svg
-                & path
-                    stroke: darken(#fff, 25%)
-                & circle
-                    stroke: darken(#fff, 25%)
-                & circle.point
-                    fill: darken(#fff, 25%)
+                filter: contrast(0.5)
 
 a.footer__item
     color: #fff
     display: block
+    width: fit-content
 
 @media screen and (max-width: 768px)
     .footer

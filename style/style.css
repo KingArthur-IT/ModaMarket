@@ -1109,33 +1109,23 @@ button.accordion-button:focus::after {
 .footer__social svg {
   width: 30px;
   height: 30px;
+  -webkit-transition: -webkit-filter .3s ease;
+  transition: -webkit-filter .3s ease;
+  transition: filter .3s ease;
+  transition: filter .3s ease, -webkit-filter .3s ease;
 }
 
-.footer__social svg path {
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
-}
-
-.footer__social svg circle {
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
-}
-
-.footer__social:hover svg path {
-  stroke: #bfbfbf;
-}
-
-.footer__social:hover svg circle {
-  stroke: #bfbfbf;
-}
-
-.footer__social:hover svg circle.point {
-  fill: #bfbfbf;
+.footer__social:hover svg {
+  -webkit-filter: contrast(0.5);
+          filter: contrast(0.5);
 }
 
 a.footer__item {
   color: #fff;
   display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 @media screen and (max-width: 768px) {
@@ -1201,10 +1191,19 @@ a.footer__item {
   cursor: pointer;
   -webkit-transition: color .3s ease;
   transition: color .3s ease;
+  -ms-flex-preferred-size: 33.33%;
+      flex-basis: 33.33%;
 }
 
 #selectCityModal .city-item:hover {
   color: #595959;
+}
+
+@media screen and (max-width: 992px) {
+  #selectCityModal .city-item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
 }
 
 .product {

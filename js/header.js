@@ -34,6 +34,18 @@ document.querySelector('#selectedCity').addEventListener('keypress', (e) => {
     }
 });
 
+document.querySelector('#selectedCity').addEventListener('input', (e) => {
+    const inputedCity = e.target.value.toLowerCase()
+    if (inputedCity.length) {
+        document.querySelectorAll('.city-item').forEach(cityItem => {
+            if (cityItem.innerHTML.toLowerCase().includes(inputedCity))
+                cityItem.classList.remove('d-none')
+            else cityItem.classList.add('d-none')
+        })
+    } else 
+        document.querySelectorAll('.city-item').forEach(cityItem => cityItem.classList.remove('d-none'))
+});
+
 //--------------------------------------------
 //login
 const emailInput = document.querySelector('#emailLogin')
