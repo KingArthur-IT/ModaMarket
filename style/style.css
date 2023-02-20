@@ -1912,3 +1912,30 @@ a.product__basket-btn {
   font-weight: 600;
   font-size: 28px;
 }
+
+@media screen and (max-width: 768px) {
+  .offer ol {
+    padding-left: 12px;
+  }
+  .offer li.offer__pretitle:before {
+    font-size: 22px;
+  }
+  .offer__title {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .offer ol {
+    padding-left: 8px;
+  }
+  .offer li {
+    padding: 5px 0;
+  }
+  .offer li.offer__pretitle:before {
+    font-size: 18px;
+  }
+  .offer__title {
+    font-size: 18px;
+  }
+}

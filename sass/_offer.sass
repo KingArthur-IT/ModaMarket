@@ -13,3 +13,24 @@
     &__title
         font-weight: 600
         font-size: 28px
+
+@media screen and (max-width: 768px)
+    .offer
+        & ol
+            padding-left: 12px
+        & li
+            &.offer__pretitle:before
+                font-size: 22px
+        &__title
+            font-size: 22px
+
+@media screen and (max-width: 425px)
+    .offer
+        & ol
+            padding-left: 8px
+        & li
+            padding: 5px 0
+            &.offer__pretitle:before
+                font-size: 18px
+        &__title
+            font-size: 18px
