@@ -15,7 +15,10 @@
 //открыть поле редактирования пароля
 document.querySelector('#changePasswordLink').addEventListener('click', (e) => {
     e.target.classList.add('d-none')
-    document.querySelector('#changePassordHero').classList.remove('d-none')
+    document.querySelector('#changePasswordHero').classList.remove('d-none')
+    setTimeout(() => {
+        document.querySelector('#changePasswordHero').classList.add('visible')
+    }, 100);
 });
 
 //кнопка сохранить пароль
@@ -38,4 +41,36 @@ document.querySelector('#changePasswordBtn').addEventListener('click', () => {
         errorField.innerHTML = 'Пароли не совпадают'
         return
     }
+});
+
+//отменить заказ
+var cancelBtn;
+
+document.querySelectorAll('.cancel-order-btn').forEach(btn => 
+    btn.addEventListener('click', () => {
+        $('#cancelOrderModal').modal('show');
+        cancelBtn = btn
+    })    
+);
+
+document.querySelector('#cancelOrderModal .btn-outline-danger').addEventListener('click', () => {
+    $('#cancelOrderModal').modal('hide');
+    if (!cancelBtn) return
+    const itemNode = cancelBtn?.parentNode?.parentNode?.parentNode
+    if (itemNode) {
+        itemNode.classList.add('hidden')
+        setTimeout(() => {
+            const accBody = itemNode.parentNode
+            itemNode.remove()
+            //если нет заказов в аккордеоне - удалить его
+            if(!accBody.querySelectorAll('.order-item').length)
+                accBody.parentNode.parentNode.remove()
+            //совсем нет заказов
+            if (!document.querySelectorAll('.accordion-item').length) {
+                document.querySelector('#ordersEmpty').classList.remove('d-none')
+                document.querySelector('#moreOrdersBtn').classList.add('d-none')
+            }
+        }, 300);
+    }
+    cancelBtn = ''
 });

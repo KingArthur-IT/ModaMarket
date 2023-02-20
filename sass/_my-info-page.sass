@@ -36,3 +36,18 @@
         transition: border .3s ease
         &:hover
             border-bottom: 1px solid #fff
+
+#changePasswordHero
+    transform: scaleY(0)
+    transform-origin: 0 0
+    transition: transform .3s ease
+    &.visible
+        transform: scaleY(1)
+.order-item
+    transform-origin: 0 0
+    transition: opacity .3s ease, transform .3s ease
+    &.hidden
+        opacity: 0
+        transform: scaleY(0)
+        padding: 0 !important
+        margin: 0 !important

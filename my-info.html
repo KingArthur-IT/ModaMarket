@@ -145,40 +145,92 @@
         <section class="section">
             <div class="cust-container">
                 <!-- Мои заказы -->
-                <h2 id="myOrders">Мои заказы</h2>
-                <div class="row d-flex pb-3">
-                    <a href="./product.html" class="basket__img-link">
-                        <img src="./assets/popular/1.jpg" alt="img">
-                    </a>
-                    <div class="basket__about">
-                        <div class="fw-bold mb-2">Куртка супер крутого бренда</div>
-                        <div class="mb-2">Размер: <span>54</span></div>
-                        <div class="mb-2">Количество: <span>1</span></div>
-                        <div class="mb-2">Цена: <strong><span>1000</span>₽</strong></div>
-                        <div class="mb-2 d-flex align-items-center">Статус: <span class="px-2">В пути</span></strong>
-                            <button class="btn btn-outline-danger">Отменить</button>
+                <h2 id="myOrders" class="mb-4">Мои заказы</h2>
+                <p id="ordersEmpty" class="d-none">У Вас еще нет заказов</p>
+                <!-- аккордеон заказов -->
+                <div class="accordion mb-3" id="faqAccordeon">
+                    <!-- заказ 2 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Заказ #2 (02.01.2023)
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordeon">
+                        <div class="accordion-body">
+                            <!-- список в заказе 2 -->
+                            <div class="row d-flex pb-3 order-item">
+                                <a href="./product.html" class="basket__img-link">
+                                    <img src="./assets/popular/1.jpg" alt="img">
+                                </a>
+                                <div class="basket__about">
+                                    <div class="fw-bold mb-2">Куртка супер крутого бренда</div>
+                                    <div class="mb-2">Размер: <span>54</span></div>
+                                    <div class="mb-2">Количество: <span>1</span></div>
+                                    <div class="mb-2">Цена: <span>1000</span>₽</div>
+                                    <div class="mb-2">Дата заказа: <span>01.01.2023</span></div>
+                                    <div class="mb-2 d-none">Дата получения: <span>01.01.2023</span></div>
+                                    <div class="mb-2 d-flex align-items-center">Статус: <span class="px-2">В пути</span>
+                                        <button class="btn btn-outline-danger cancel-order-btn">Отменить</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row d-flex pb-3 order-item">
+                                <a href="./product.html" class="basket__img-link">
+                                    <img src="./assets/popular/1.jpg" alt="img">
+                                </a>
+                                <div class="basket__about">
+                                    <div class="fw-bold mb-2">Куртка супер крутого бренда</div>
+                                    <div class="mb-2">Размер: <span>54</span></div>
+                                    <div class="mb-2">Количество: <span>1</span></div>
+                                    <div class="mb-2">Цена: <span>1000</span>₽</div>
+                                    <div class="mb-2">Дата заказа: <span>01.01.2023</span></div>
+                                    <div class="mb-2">Дата получения: <span>01.01.2023</span></div>
+                                    <div class="mb-2 d-flex align-items-center">Статус: <span class="px-2">Оформлен</span>
+                                        <button class="btn btn-outline-danger cancel-order-btn">Отменить</button>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                      </div>
+                    </div>
+                    <!-- заказ 1 -->
+                    <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Заказ #1 (01.01.2023)
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordeon">
+                        <div class="accordion-body">
+                          <!-- список в заказе 1 -->
+                          <div class="row d-flex pb-3 order-item">
+                                <a href="./product.html" class="basket__img-link">
+                                    <img src="./assets/popular/1.jpg" alt="img">
+                                </a>
+                                <div class="basket__about">
+                                    <div class="fw-bold mb-2">Куртка супер крутого бренда</div>
+                                    <div class="mb-2">Размер: <span>54</span></div>
+                                    <div class="mb-2">Количество: <span>1</span></div>
+                                    <div class="mb-2">Цена: <span>1000</span>₽</div>
+                                    <div class="mb-2">Дата заказа: <span>01.01.2023</span></div>
+                                    <div class="mb-2 d-none">Дата получения: <span>01.01.2023</span></div>
+                                    <div class="mb-2 d-flex align-items-center">Статус: <span class="px-2">В пути</span>
+                                        <button class="btn btn-outline-danger cancel-order-btn">Отменить</button>
+                                    </div>
+                                </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                 </div>
-                <div class="row d-flex pb-3">
-                    <a href="./product.html" class="basket__img-link">
-                        <img src="./assets/popular/1.jpg" alt="img">
-                    </a>
-                    <div class="basket__about">
-                        <div class="fw-bold mb-2">Куртка супер крутого бренда</div>
-                        <div class="mb-2">Размер: <span>54</span></div>
-                        <div class="mb-2">Количество: <span>1</span></div>
-                        <div class="mb-2">Цена: <strong><span>1000</span>₽</strong></div>
-                        <div class="mb-2 d-flex align-items-center">Статус: <span class="px-2">Получено</span></strong>
-                            <button class="btn btn-outline-danger d-none">Отменить</button>
-                        </div>
-                    </div>
-                </div>
-                <button class="btn btn-outline-dark d-block m-auto px-5">Еще</button>
+
+                <button id="moreOrdersBtn" class="btn btn-outline-dark d-block m-auto px-5">Еще</button>
 
                 <hr>
                 <!-- Возвраты -->
-                <h2 id="myReturns">Возвраты</h2>
+                <h2 id="myReturns" class="mb-4">Возвраты</h2>
+                <p id="ordersEmpty" class="d-none">У Вас нет возвратов</p>
                 <div class="row d-flex pb-3">
                     <a href="./product.html" class="basket__img-link">
                         <img src="./assets/popular/1.jpg" alt="img">
@@ -187,8 +239,9 @@
                         <div class="fw-bold mb-2">Куртка супер крутого бренда</div>
                         <div class="mb-2">Размер: <span>54</span></div>
                         <div class="mb-2">Количество: <span>1</span></div>
-                        <div class="mb-2">Цена: <strong><span>1000</span>₽</strong></div>
-                        <div class="mb-2">Статус: <span>Вернули</span></strong></div>
+                        <div class="mb-2">Цена: <span>1000</span>₽</div>
+                        <div class="mb-2">Дата заказа: <span>01.01.2023</span></div>
+                        <div class="mb-2">Статус: <span>Вернули</span></div>
                     </div>
                 </div>
 
@@ -231,7 +284,7 @@
                 </div>
                 <!-- мои данные: пароль -->
                 <div id="changePasswordLink" class="my-info__password-link mb-2">Изменить пароль</div>
-                <div id="changePassordHero" class="d-none">
+                <div id="changePasswordHero" class="d-none">
                     <div class="input-group mb-3 my-info__input-wrap">
                         <span class="input-group-text">
                             <svg class="modal-input-icon" fill="#000000" width="800px" height="800px" viewBox="0 0 32 32" id="icon" xmlns="http://www.w3.org/2000/svg">
@@ -468,6 +521,24 @@
                 </div>
                 <div class="modal-body">
                     <h1 class="modal-title fs-5 text-center mb-3">Пароль успешно сброшен</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- confirm to cancel order -->
+    <div class="modal fade" id="cancelOrderModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5">Подтвердите отмену</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h1 class="modal-title fs-5 text-center mb-3">Вы хотите отменить данный заказ?</h1>
+                    <div class="d-flex justify-content-center">
+                        <button data-bs-dismiss="modal" class="btn btn-outline-success me-3">Нет</button>
+                        <button class="btn btn-outline-danger">Да</button>
+                    </div>
                 </div>
             </div>
         </div>

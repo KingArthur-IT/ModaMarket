@@ -1249,6 +1249,10 @@ a.footer__item {
   color: #595959;
 }
 
+#cancelOrderModal .modal-body .btn {
+  min-width: 100px;
+}
+
 @media screen and (max-width: 992px) {
   #selectCityModal .city-item {
     -ms-flex-preferred-size: 50%;
@@ -1806,6 +1810,39 @@ a.product__basket-btn {
 
 .my-info__password-link:hover {
   border-bottom: 1px solid #fff;
+}
+
+#changePasswordHero {
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+}
+
+#changePasswordHero.visible {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+.order-item {
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transition: opacity .3s ease, -webkit-transform .3s ease;
+  transition: opacity .3s ease, -webkit-transform .3s ease;
+  transition: opacity .3s ease, transform .3s ease;
+  transition: opacity .3s ease, transform .3s ease, -webkit-transform .3s ease;
+}
+
+.order-item.hidden {
+  opacity: 0;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .offer ol {
