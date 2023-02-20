@@ -713,6 +713,12 @@ button.accordion-button:focus::after {
   transition: opacity .3s ease;
 }
 
+@media screen and (max-width: 475px) {
+  .choose-section__card:hover .choose-section__card-name {
+    font-size: 16px;
+  }
+}
+
 @media screen and (max-width: 425px) {
   .choose-section__card-name {
     font-size: 12px;
