@@ -1,5 +1,4 @@
 .catalog
-    min-width: 1024px
     &__card
         position: relative
         cursor: pointer
@@ -76,12 +75,27 @@
             font-weight: bold
         &:hover
             background: #c7c7c7
-            // color: lighten(#222222, 25%)
-        
-// @media screen and (max-width: 992px)
+    &__sort-dropdown
+        & ul li
+            cursor: pointer
+        & .dropdown-toggle::after
+            margin-left: 12px
+
+@media screen and (max-width: 992px)
+    .catalog
+        padding-top: 16px
+        &__sidebar
+            display: none
 
 @media screen and (max-width: 768px)
     .catalog
         &__card
+            flex-basis: 33.33%
             & .brand
                 font-size: 14px
+
+@media screen and (max-width: 425px)
+    .catalog
+        padding-top: 8px
+        &__card
+            flex-basis: 50%

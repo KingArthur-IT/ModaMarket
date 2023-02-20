@@ -33,7 +33,7 @@
         </div>
         <div class="cust-container header__hero d-flex justify-content-between align-items-center">
             <div class="header__tabs d-flex">
-                <a href="./womens.html" class="me-3 header__tab">Женщинам</a>
+                <a href="./womens.html" class="me-3 header__tab active">Женщинам</a>
                 <a href="./mans.html" class="me-3 header__tab">Мужчинам</a>
                 <a href="./children.html" class="header__tab">Детям</a>
             </div>
@@ -147,7 +147,7 @@
                 <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
                     <ol class="breadcrumb mb-0 py-2">
                         <li class="breadcrumb-item"><a href="./index.html">Главная</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Мужчинам</li>
+                        <li class="breadcrumb-item active" aria-current="page">Женщинам</li>
                     </ol>
                 </nav>
             </div>
@@ -156,7 +156,7 @@
             <div class="cust-container">
                 <div class="row mb-2">
                     <!-- catalog sidebar -->
-                    <div class="col-2 pe-0">
+                    <div class="col-2 pe-0 catalog__sidebar">
                         <div class="accordion" id="catalogAccordeon">
                             <div class="accordion-item">
                               <h2 class="accordion-header" id="headingOne">
@@ -206,124 +206,129 @@
                           </div>
                     </div>
                     <!-- catalog hero -->
-                    <div class="col-10 pe-0 d-flex flex-wrap">
-                        <a href="./product.html" class="catalog__card px-1 px-sm-2">
-                            <div class="catalog__image">
-                                <img src="./assets/popular/1.jpg" alt="img">
-                                <svg class="catalog__favourite" fill="#fff" width="800px" height="800px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1771.731 291.037C1675.709 193.659 1547.944 140 1411.818 140h-.113c-136.125 0-263.777 53.66-359.573 150.924-37.618 38.07-68.571 80.997-92.294 127.426-23.61-46.429-54.563-89.356-92.068-127.313C771.86 193.659 644.208 140 507.97 140h-.113c-136.012 0-263.777 53.66-359.8 151.037-197.691 200.629-197.691 527.103 1.695 729.088l810.086 760.154 811.893-761.736c197.692-200.403 197.692-526.877 0-727.506" fill-rule="evenodd"/>
-                                </svg>
-                                <div class="catalog__label p-1 d-none">Хит продаж</div>
+                    <div class="col-12 col-lg-10 pe-0">
+                        <!-- Сортировка -->
+                        <div class="mb-3 px-2">
+                            <div class="d-flex align-items-center justify-content-end">
+                                <div class="me-3">Сортировка</div>
+                                <div class="dropdown catalog__sort-dropdown">
+                                    <button class="btn btn-outline-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                      По популярности
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                      <li class="dropdown-item">По популярности</li>
+                                      <li class="dropdown-item">По возрастанию цены</li>
+                                      <li class="dropdown-item">По убыванию цены</li>
+                                      <li class="dropdown-item">Новинки</li>
+                                      <li class="dropdown-item">Со скидками</li>
+                                    </ul>
+                                </div>
                             </div>
-                            <div class="price">
-                                <div class="price__old"><span class="me-1">1 000</span>₽</div>
-                                <div class="price__new ms-2 d-none"><span class="me-1">700</span>₽</div>
-                            </div>
-                            <div class="name">Куртка</div>
-                            <div class="brand">Супер модный бренд</div>
-                            <div class="sizes">38 40 42</div>
-                        </a>
-                        <a href="./product.html" class="catalog__card px-1 px-sm-2">
-                            <div class="catalog__image">
-                                <img src="./assets/popular/1.jpg" alt="img">
-                                <svg class="catalog__favourite" fill="#fff" width="800px" height="800px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1771.731 291.037C1675.709 193.659 1547.944 140 1411.818 140h-.113c-136.125 0-263.777 53.66-359.573 150.924-37.618 38.07-68.571 80.997-92.294 127.426-23.61-46.429-54.563-89.356-92.068-127.313C771.86 193.659 644.208 140 507.97 140h-.113c-136.012 0-263.777 53.66-359.8 151.037-197.691 200.629-197.691 527.103 1.695 729.088l810.086 760.154 811.893-761.736c197.692-200.403 197.692-526.877 0-727.506" fill-rule="evenodd"/>
-                                </svg>
-                                <div class="catalog__label p-1">-1%</div>
-                            </div>
-                            <div class="price">
-                                <div class="price__old overlined"><span class="me-1">1 000</span>₽</div>
-                                <div class="price__new ms-2 none"><span class="me-1">990</span>₽</div>
-                            </div>
-                            <div class="name">Куртка</div>
-                            <div class="brand">Супер модный бренд</div>
-                            <div class="sizes">38 40 42</div>
-                        </a>
-                        <a href="./product.html" class="catalog__card px-1 px-sm-2">
-                            <div class="catalog__image">
-                                <img src="./assets/popular/1.jpg" alt="img">
-                                <svg class="catalog__favourite" fill="#fff" width="800px" height="800px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1771.731 291.037C1675.709 193.659 1547.944 140 1411.818 140h-.113c-136.125 0-263.777 53.66-359.573 150.924-37.618 38.07-68.571 80.997-92.294 127.426-23.61-46.429-54.563-89.356-92.068-127.313C771.86 193.659 644.208 140 507.97 140h-.113c-136.012 0-263.777 53.66-359.8 151.037-197.691 200.629-197.691 527.103 1.695 729.088l810.086 760.154 811.893-761.736c197.692-200.403 197.692-526.877 0-727.506" fill-rule="evenodd"/>
-                                </svg>
-                                <div class="catalog__label p-1 d-none">Хит продаж</div>
-                            </div>
-                            <div class="price">
-                                <div class="price__old"><span class="me-1">1 000</span>₽</div>
-                                <div class="price__new ms-2 d-none"><span class="me-1">700</span>₽</div>
-                            </div>
-                            <div class="name">Куртка</div>
-                            <div class="brand">Супер модный бренд</div>
-                            <div class="sizes">38 40 42</div>
-                        </a>
-                        <a href="./product.html" class="catalog__card px-1 px-sm-2">
-                            <div class="catalog__image">
-                                <img src="./assets/popular/1.jpg" alt="img">
-                                <svg class="catalog__favourite" fill="#fff" width="800px" height="800px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1771.731 291.037C1675.709 193.659 1547.944 140 1411.818 140h-.113c-136.125 0-263.777 53.66-359.573 150.924-37.618 38.07-68.571 80.997-92.294 127.426-23.61-46.429-54.563-89.356-92.068-127.313C771.86 193.659 644.208 140 507.97 140h-.113c-136.012 0-263.777 53.66-359.8 151.037-197.691 200.629-197.691 527.103 1.695 729.088l810.086 760.154 811.893-761.736c197.692-200.403 197.692-526.877 0-727.506" fill-rule="evenodd"/>
-                                </svg>
-                                <div class="catalog__label p-1">Хит продаж</div>
-                            </div>
-                            <div class="price">
-                                <div class="price__old overlined"><span class="me-1">1 000</span>₽</div>
-                                <div class="price__new ms-2 none"><span class="me-1">700</span>₽</div>
-                            </div>
-                            <div class="name">Куртка</div>
-                            <div class="brand">Супер модный бренд</div>
-                            <div class="sizes">38 40 42</div>
-                        </a>
-                        <a href="./product.html" class="catalog__card px-1 px-sm-2">
-                            <div class="catalog__image">
-                                <img src="./assets/popular/1.jpg" alt="img">
-                                <svg class="catalog__favourite" fill="#fff" width="800px" height="800px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1771.731 291.037C1675.709 193.659 1547.944 140 1411.818 140h-.113c-136.125 0-263.777 53.66-359.573 150.924-37.618 38.07-68.571 80.997-92.294 127.426-23.61-46.429-54.563-89.356-92.068-127.313C771.86 193.659 644.208 140 507.97 140h-.113c-136.012 0-263.777 53.66-359.8 151.037-197.691 200.629-197.691 527.103 1.695 729.088l810.086 760.154 811.893-761.736c197.692-200.403 197.692-526.877 0-727.506" fill-rule="evenodd"/>
-                                </svg>
-                                <div class="catalog__label p-1">Хит продаж</div>
-                            </div>
-                            <div class="price">
-                                <div class="price__old overlined"><span class="me-1">1 000</span>₽</div>
-                                <div class="price__new ms-2 none"><span class="me-1">700</span>₽</div>
-                            </div>
-                            <div class="name">Куртка</div>
-                            <div class="brand">Супер модный бренд</div>
-                            <div class="sizes">38 40 42</div>
-                        </a>
-                        <a href="./product.html" class="catalog__card px-1 px-sm-2">
-                            <div class="catalog__image">
-                                <img src="./assets/popular/1.jpg" alt="img">
-                                <svg class="catalog__favourite" fill="#fff" width="800px" height="800px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1771.731 291.037C1675.709 193.659 1547.944 140 1411.818 140h-.113c-136.125 0-263.777 53.66-359.573 150.924-37.618 38.07-68.571 80.997-92.294 127.426-23.61-46.429-54.563-89.356-92.068-127.313C771.86 193.659 644.208 140 507.97 140h-.113c-136.012 0-263.777 53.66-359.8 151.037-197.691 200.629-197.691 527.103 1.695 729.088l810.086 760.154 811.893-761.736c197.692-200.403 197.692-526.877 0-727.506" fill-rule="evenodd"/>
-                                </svg>
-                                <div class="catalog__label p-1">Хит продаж</div>
-                            </div>
-                            <div class="price">
-                                <div class="price__old overlined"><span class="me-1">1 000</span>₽</div>
-                                <div class="price__new ms-2 none"><span class="me-1">700</span>₽</div>
-                            </div>
-                            <div class="name">Куртка</div>
-                            <div class="brand">Супер модный бренд</div>
-                            <div class="sizes">38 40 42</div>
-                        </a>
-                        <a href="./product.html" class="catalog__card px-1 px-sm-2">
-                            <div class="catalog__image">
-                                <img src="./assets/popular/1.jpg" alt="img">
-                                <svg class="catalog__favourite" fill="#fff" width="800px" height="800px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1771.731 291.037C1675.709 193.659 1547.944 140 1411.818 140h-.113c-136.125 0-263.777 53.66-359.573 150.924-37.618 38.07-68.571 80.997-92.294 127.426-23.61-46.429-54.563-89.356-92.068-127.313C771.86 193.659 644.208 140 507.97 140h-.113c-136.012 0-263.777 53.66-359.8 151.037-197.691 200.629-197.691 527.103 1.695 729.088l810.086 760.154 811.893-761.736c197.692-200.403 197.692-526.877 0-727.506" fill-rule="evenodd"/>
-                                </svg>
-                                <div class="catalog__label p-1">Хит продаж</div>
-                            </div>
-                            <div class="price">
-                                <div class="price__old overlined"><span class="me-1">1 000</span>₽</div>
-                                <div class="price__new ms-2 none"><span class="me-1">700</span>₽</div>
-                            </div>
-                            <div class="name">Куртка</div>
-                            <div class="brand">Супер модный бренд</div>
-                            <div class="sizes">38 40 42</div>
-                        </a>
+                        </div>
+                        <!-- товары -->
+                        <div class="d-flex flex-wrap">
+                            <a href="./product.html" class="catalog__card px-1 px-sm-2">
+                                <div class="catalog__image">
+                                    <img src="./assets/popular/1.jpg" alt="img">
+                                    <svg class="catalog__favourite" fill="#fff" width="800px" height="800px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1771.731 291.037C1675.709 193.659 1547.944 140 1411.818 140h-.113c-136.125 0-263.777 53.66-359.573 150.924-37.618 38.07-68.571 80.997-92.294 127.426-23.61-46.429-54.563-89.356-92.068-127.313C771.86 193.659 644.208 140 507.97 140h-.113c-136.012 0-263.777 53.66-359.8 151.037-197.691 200.629-197.691 527.103 1.695 729.088l810.086 760.154 811.893-761.736c197.692-200.403 197.692-526.877 0-727.506" fill-rule="evenodd"/>
+                                    </svg>
+                                    <div class="catalog__label p-1 d-none">Хит продаж</div>
+                                </div>
+                                <div class="price">
+                                    <div class="price__old"><span class="me-1">1 000</span>₽</div>
+                                    <div class="price__new ms-2 d-none"><span class="me-1">700</span>₽</div>
+                                </div>
+                                <div class="name">Куртка</div>
+                                <div class="brand mb-1">Супер модный бренд</div>
+                                <div class="sizes">Размеры: <span>38 40 42</span></div>
+                            </a>
+                            <a href="./product.html" class="catalog__card px-1 px-sm-2">
+                                <div class="catalog__image">
+                                    <img src="./assets/popular/1.jpg" alt="img">
+                                    <svg class="catalog__favourite" fill="#fff" width="800px" height="800px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1771.731 291.037C1675.709 193.659 1547.944 140 1411.818 140h-.113c-136.125 0-263.777 53.66-359.573 150.924-37.618 38.07-68.571 80.997-92.294 127.426-23.61-46.429-54.563-89.356-92.068-127.313C771.86 193.659 644.208 140 507.97 140h-.113c-136.012 0-263.777 53.66-359.8 151.037-197.691 200.629-197.691 527.103 1.695 729.088l810.086 760.154 811.893-761.736c197.692-200.403 197.692-526.877 0-727.506" fill-rule="evenodd"/>
+                                    </svg>
+                                    <div class="catalog__label p-1 d-none">Хит продаж</div>
+                                </div>
+                                <div class="price">
+                                    <div class="price__old"><span class="me-1">1 000</span>₽</div>
+                                    <div class="price__new ms-2 d-none"><span class="me-1">700</span>₽</div>
+                                </div>
+                                <div class="name">Куртка</div>
+                                <div class="brand mb-1">Супер модный бренд</div>
+                                <div class="sizes">Размеры: <span>38 40 42</span></div>
+                            </a>
+                            <a href="./product.html" class="catalog__card px-1 px-sm-2">
+                                <div class="catalog__image">
+                                    <img src="./assets/popular/1.jpg" alt="img">
+                                    <svg class="catalog__favourite" fill="#fff" width="800px" height="800px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1771.731 291.037C1675.709 193.659 1547.944 140 1411.818 140h-.113c-136.125 0-263.777 53.66-359.573 150.924-37.618 38.07-68.571 80.997-92.294 127.426-23.61-46.429-54.563-89.356-92.068-127.313C771.86 193.659 644.208 140 507.97 140h-.113c-136.012 0-263.777 53.66-359.8 151.037-197.691 200.629-197.691 527.103 1.695 729.088l810.086 760.154 811.893-761.736c197.692-200.403 197.692-526.877 0-727.506" fill-rule="evenodd"/>
+                                    </svg>
+                                    <div class="catalog__label p-1 d-none">Хит продаж</div>
+                                </div>
+                                <div class="price">
+                                    <div class="price__old"><span class="me-1">1 000</span>₽</div>
+                                    <div class="price__new ms-2 d-none"><span class="me-1">700</span>₽</div>
+                                </div>
+                                <div class="name">Куртка</div>
+                                <div class="brand mb-1">Супер модный бренд</div>
+                                <div class="sizes">Размеры: <span>38 40 42</span></div>
+                            </a>
+                            <a href="./product.html" class="catalog__card px-1 px-sm-2">
+                                <div class="catalog__image">
+                                    <img src="./assets/popular/1.jpg" alt="img">
+                                    <svg class="catalog__favourite" fill="#fff" width="800px" height="800px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1771.731 291.037C1675.709 193.659 1547.944 140 1411.818 140h-.113c-136.125 0-263.777 53.66-359.573 150.924-37.618 38.07-68.571 80.997-92.294 127.426-23.61-46.429-54.563-89.356-92.068-127.313C771.86 193.659 644.208 140 507.97 140h-.113c-136.012 0-263.777 53.66-359.8 151.037-197.691 200.629-197.691 527.103 1.695 729.088l810.086 760.154 811.893-761.736c197.692-200.403 197.692-526.877 0-727.506" fill-rule="evenodd"/>
+                                    </svg>
+                                    <div class="catalog__label p-1 d-none">Хит продаж</div>
+                                </div>
+                                <div class="price">
+                                    <div class="price__old"><span class="me-1">1 000</span>₽</div>
+                                    <div class="price__new ms-2 d-none"><span class="me-1">700</span>₽</div>
+                                </div>
+                                <div class="name">Куртка</div>
+                                <div class="brand mb-1">Супер модный бренд</div>
+                                <div class="sizes">Размеры: <span>38 40 42</span></div>
+                            </a>
+                            <a href="./product.html" class="catalog__card px-1 px-sm-2">
+                                <div class="catalog__image">
+                                    <img src="./assets/popular/1.jpg" alt="img">
+                                    <svg class="catalog__favourite" fill="#fff" width="800px" height="800px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1771.731 291.037C1675.709 193.659 1547.944 140 1411.818 140h-.113c-136.125 0-263.777 53.66-359.573 150.924-37.618 38.07-68.571 80.997-92.294 127.426-23.61-46.429-54.563-89.356-92.068-127.313C771.86 193.659 644.208 140 507.97 140h-.113c-136.012 0-263.777 53.66-359.8 151.037-197.691 200.629-197.691 527.103 1.695 729.088l810.086 760.154 811.893-761.736c197.692-200.403 197.692-526.877 0-727.506" fill-rule="evenodd"/>
+                                    </svg>
+                                    <div class="catalog__label p-1 d-none">Хит продаж</div>
+                                </div>
+                                <div class="price">
+                                    <div class="price__old"><span class="me-1">1 000</span>₽</div>
+                                    <div class="price__new ms-2 d-none"><span class="me-1">700</span>₽</div>
+                                </div>
+                                <div class="name">Куртка</div>
+                                <div class="brand mb-1">Супер модный бренд</div>
+                                <div class="sizes">Размеры: <span>38 40 42</span></div>
+                            </a>
+                            <a href="./product.html" class="catalog__card px-1 px-sm-2">
+                                <div class="catalog__image">
+                                    <img src="./assets/popular/1.jpg" alt="img">
+                                    <svg class="catalog__favourite" fill="#fff" width="800px" height="800px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1771.731 291.037C1675.709 193.659 1547.944 140 1411.818 140h-.113c-136.125 0-263.777 53.66-359.573 150.924-37.618 38.07-68.571 80.997-92.294 127.426-23.61-46.429-54.563-89.356-92.068-127.313C771.86 193.659 644.208 140 507.97 140h-.113c-136.012 0-263.777 53.66-359.8 151.037-197.691 200.629-197.691 527.103 1.695 729.088l810.086 760.154 811.893-761.736c197.692-200.403 197.692-526.877 0-727.506" fill-rule="evenodd"/>
+                                    </svg>
+                                    <div class="catalog__label p-1 d-none">Хит продаж</div>
+                                </div>
+                                <div class="price">
+                                    <div class="price__old"><span class="me-1">1 000</span>₽</div>
+                                    <div class="price__new ms-2 d-none"><span class="me-1">700</span>₽</div>
+                                </div>
+                                <div class="name">Куртка</div>
+                                <div class="brand mb-1">Супер модный бренд</div>
+                                <div class="sizes">Размеры: <span>38 40 42</span></div>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-2"></div>
-                    <div class="col-10">
+                    <div class="col-2 d-none d-lg-block"></div>
+                    <div class="col-12 col-lg-10">
                         <button class="btn btn-outline-dark d-block m-auto px-5">Еще</button>
                     </div>
                 </div>
@@ -541,5 +546,6 @@
     <script src="./js/owl.carousel.min.js"></script>
     <script src="./js/carousel-settings.js"></script>
     <script src="./js/header.js"></script>
+    <script src="./js/catalog.js"></script>
 </body>
 </html>
