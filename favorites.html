@@ -147,7 +147,7 @@
                 <h2 class="mb-4">Избранное</h2>
                 <!-- no items in basket -->
                 <!-- add "d-none" class if there is some items in favorites -->
-                <div class="basket__empty d-none">
+                <div id="favoriteEmpty" class="basket__empty d-none">
                     <svg fill="#ff0000" width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M2,21h8a1,1,0,0,0,0-2H3.071A7.011,7.011,0,0,1,10,13a5.044,5.044,0,1,0-3.377-1.337A9.01,9.01,0,0,0,1,20,1,1,0,0,0,2,21ZM10,5A3,3,0,1,1,7,8,3,3,0,0,1,10,5Zm5.085,12.121C14.656,15.069,15.918,14,17.223,14A2,2,0,0,1,19,14.823,2,2,0,0,1,20.777,14c1.3,0,2.567,1.069,2.138,3.121C22.48,19.2,19,21,19,21S15.52,19.2,15.085,17.121Z"/>
                     </svg>
@@ -156,7 +156,7 @@
                 </div>
 
                 <!-- add "d-none" class if there is no items in favorites -->
-                <div>
+                <div id="favoriteList">
                     <div class="row d-flex py-5 pt-0 basket__item">
                         <a href="./product.html" class="basket__img-link">
                             <img src="./assets/popular/1.jpg" alt="img">
@@ -466,5 +466,6 @@
     <script src="./js/owl.carousel.min.js"></script>
     <script src="./js/carousel-settings.js"></script>
     <script src="./js/header.js"></script>
+    <script src="./js/favorite.js"></script>
 </body>
 </html>

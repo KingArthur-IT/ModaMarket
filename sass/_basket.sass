@@ -1,6 +1,8 @@
 .basket
     min-width: 1024px
     &__empty
+        opacity: 0
+        transition: opacity .3s ease
         & svg
             width: 80px
             height: 80px
@@ -9,8 +11,14 @@
             margin-bottom: 12px
         & a
             width: fit-content
+        &.visible
+            opacity: 1
     &__item
         border-bottom: 1px solid #ccc
+        transition: height .3s ease, opacity .3s ease
+        &.hidden
+            opacity: 0
+            height: 0
     &__img-link
         width: fit-content
         & img

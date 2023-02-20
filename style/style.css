@@ -1571,6 +1571,12 @@ a.product__basket-btn {
   min-width: 1024px;
 }
 
+.basket__empty {
+  opacity: 0;
+  -webkit-transition: opacity .3s ease;
+  transition: opacity .3s ease;
+}
+
 .basket__empty svg {
   width: 80px;
   height: 80px;
@@ -1585,8 +1591,19 @@ a.product__basket-btn {
   width: fit-content;
 }
 
+.basket__empty.visible {
+  opacity: 1;
+}
+
 .basket__item {
   border-bottom: 1px solid #ccc;
+  -webkit-transition: height .3s ease, opacity .3s ease;
+  transition: height .3s ease, opacity .3s ease;
+}
+
+.basket__item.hidden {
+  opacity: 0;
+  height: 0;
 }
 
 .basket__img-link {
