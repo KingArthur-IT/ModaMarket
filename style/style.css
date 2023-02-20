@@ -1619,10 +1619,6 @@ a.product__basket-btn {
   }
 }
 
-.basket {
-  min-width: 1024px;
-}
-
 .basket__empty {
   opacity: 0;
   -webkit-transition: opacity .3s ease;
@@ -1651,10 +1647,10 @@ a.product__basket-btn {
   border-bottom: 1px solid #ccc;
   -webkit-transform-origin: 0 0;
           transform-origin: 0 0;
-  -webkit-transition: height .3s ease, opacity .3s ease, -webkit-transform .3s ease;
-  transition: height .3s ease, opacity .3s ease, -webkit-transform .3s ease;
-  transition: height .3s ease, opacity .3s ease, transform .3s ease;
-  transition: height .3s ease, opacity .3s ease, transform .3s ease, -webkit-transform .3s ease;
+  -webkit-transition: height .6s ease, opacity .6s ease, -webkit-transform .6s ease;
+  transition: height .6s ease, opacity .6s ease, -webkit-transform .6s ease;
+  transition: height .6s ease, opacity .6s ease, transform .6s ease;
+  transition: height .6s ease, opacity .6s ease, transform .6s ease, -webkit-transform .6s ease;
 }
 
 .basket__item.hidden {

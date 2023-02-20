@@ -3,7 +3,10 @@ calculateResume();
 
 //кнопка "оформить"
 document.querySelector('#preOrderBtn').addEventListener('click', () => {
-    document.querySelector('#contactsDataCard').classList.remove('d-none')  
+    document.querySelector('#contactsDataCard').classList.remove('d-none')
+    setTimeout(() => {
+        document.querySelector('#contactsDataCard').classList.add('visible')
+    }, 200);
 });
 
 //для карточки "заказать"
