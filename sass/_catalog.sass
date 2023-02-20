@@ -80,12 +80,17 @@
             cursor: pointer
         & .dropdown-toggle::after
             margin-left: 12px
+    &__mob-filters
+        & svg
+            width: 28px
+            height: 28px
+        &:hover
+            & svg
+                fill: #fff
 
 @media screen and (max-width: 992px)
     .catalog
         padding-top: 16px
-        &__sidebar
-            display: none
 
 @media screen and (max-width: 768px)
     .catalog

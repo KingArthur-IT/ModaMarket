@@ -1590,12 +1590,18 @@ a.product__basket-btn {
   margin-left: 12px;
 }
 
+.catalog__mob-filters svg {
+  width: 28px;
+  height: 28px;
+}
+
+.catalog__mob-filters:hover svg {
+  fill: #fff;
+}
+
 @media screen and (max-width: 992px) {
   .catalog {
     padding-top: 16px;
-  }
-  .catalog__sidebar {
-    display: none;
   }
 }
 
