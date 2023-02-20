@@ -15,10 +15,14 @@
             opacity: 1
     &__item
         border-bottom: 1px solid #ccc
-        transition: height .3s ease, opacity .3s ease
+        transform-origin: 0 0
+        transition: height .3s ease, opacity .3s ease, transform .3s ease
         &.hidden
             opacity: 0
             height: 0
+            transform: scaleY(0)
+            padding: 0 !important
+            margin: 0 !important
     &__img-link
         width: fit-content
         & img
@@ -78,6 +82,11 @@
     &__card
         box-shadow: 0 0 8px rgba(0, 0, 0, .16)
         border: none
+        transform: scaleY(0)
+        transform-origin: 0 0
+        transition: transform .3s ease
+        &.visible
+            transform: scaleY(1)
     &__success-icon
         width: 60px
         height: 60px

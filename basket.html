@@ -147,7 +147,7 @@
                 <h2 class="mb-4">Корзина</h2>
                 <!-- no items in basket -->
                 <!-- add "d-none" class if there is some items in basket -->
-                <div class="basket__empty d-none">
+                <div id="basketEmpty" class="basket__empty d-none">
                     <svg width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
                         <path d="M22.4 22.4c-1.554 0-2.8 1.246-2.8 2.8 0 1.546 1.254 2.8 2.8 2.8 1.546 0 2.8-1.254 2.8-2.8 0-1.554-1.26-2.8-2.8-2.8zM0 0v2.8h2.8l5.04 10.626-1.904 3.43c-.21.392-.336.854-.336 1.344 0 1.546 1.254 2.8 2.8 2.8h16.8v-2.8H8.988c-.193 0-.35-.157-.35-.35 0-.07.014-.126.042-.168L9.94 15.4h10.43c1.05 0 1.974-.588 2.45-1.442L27.832 4.9c.098-.224.168-.462.168-.7 0-.773-.627-1.4-1.4-1.4H5.894L4.578 0H0zm8.4 22.4c-1.554 0-2.8 1.246-2.8 2.8 0 1.546 1.254 2.8 2.8 2.8 1.546 0 2.8-1.254 2.8-2.8 0-1.554-1.26-2.8-2.8-2.8z" fill="#626F77" fill-rule="evenodd"/>
                     </svg>
@@ -156,10 +156,10 @@
                 </div>
 
                 <!-- add "d-none" class if there is no items in basket -->
-                <div class="row">
+                <div id="basketList" class="row">
                     <!-- list of broducts in basket -->
                     <div class="col-7">
-                        <div class="row d-flex py-5 pt-0 basket__item">
+                        <div class="row d-flex pb-5 mb-5 basket__item">
                             <a href="./product.html" class="basket__img-link">
                                 <img src="./assets/popular/1.jpg" alt="img">
                             </a>
@@ -206,9 +206,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row d-flex py-5 basket__item">
+                        <div class="row d-flex pb-5 mb-5 basket__item">
                             <a href="./product.html" class="basket__img-link">
-                                <img src="./assets/popular/1.jpg" alt="img">
+                                <img src="./assets/main/boy-2.jpg" alt="img">
                             </a>
                             <div class="basket__about d-flex flex-column justify-content-between">
                                 <div>
@@ -257,7 +257,7 @@
                     <!-- resume card -->
                     <div class="col-5">
                         <!-- Сумма заказа -->
-                        <div class="card basket__card p-3 mb-3">
+                        <div class="card basket__card p-3 mb-3 visible">
                             <h4 class="mb-2">Сумма заказа</h4>
                             <div class="d-flex align-items-center justify-content-between">
                                 <div id="basket-prod-count">Товаров: <span>1</span> на сумму</div>

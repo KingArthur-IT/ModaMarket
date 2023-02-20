@@ -1597,13 +1597,21 @@ a.product__basket-btn {
 
 .basket__item {
   border-bottom: 1px solid #ccc;
-  -webkit-transition: height .3s ease, opacity .3s ease;
-  transition: height .3s ease, opacity .3s ease;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transition: height .3s ease, opacity .3s ease, -webkit-transform .3s ease;
+  transition: height .3s ease, opacity .3s ease, -webkit-transform .3s ease;
+  transition: height .3s ease, opacity .3s ease, transform .3s ease;
+  transition: height .3s ease, opacity .3s ease, transform .3s ease, -webkit-transform .3s ease;
 }
 
 .basket__item.hidden {
   opacity: 0;
   height: 0;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  padding: 0 !important;
+  margin: 0 !important;
 }
 
 .basket__img-link {
@@ -1710,6 +1718,19 @@ a.product__basket-btn {
   -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.16);
           box-shadow: 0 0 8px rgba(0, 0, 0, 0.16);
   border: none;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+}
+
+.basket__card.visible {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
 }
 
 .basket__success-icon {

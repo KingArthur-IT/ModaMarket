@@ -67,6 +67,30 @@ document.querySelectorAll('.basket__favourite').forEach(el => {
     })
 });
 
+//удалить товар из корзины
+document.querySelectorAll('#basketList .basket__trash').forEach(el => 
+    el.addEventListener('click', () => {
+        const itemNode = el.parentNode?.parentNode?.parentNode
+        if (itemNode) {
+            itemNode.classList.add('hidden')
+            if (document.querySelectorAll('#basketList .basket__item').length === 1) 
+                document.querySelectorAll('.basket__card').forEach(el => el.classList.remove('visible'))
+            setTimeout(() => {
+                itemNode.remove()
+                //if there is no items in favorites more
+                if (!document.querySelectorAll('#basketList .basket__item').length) {
+                    document.querySelector('#basketList').classList.add('d-none')
+                    document.querySelector('#basketEmpty').classList.remove('d-none')
+                    setTimeout(() => {
+                        document.querySelector('#basketEmpty').classList.add('visible')
+                    }, 200);
+                } else calculateResume()
+            }, 300);
+        }
+    })    
+)
+
+//функция расчета суммы товаров в корзине
 function calculateResume() {
     let oldSumm = 0,
         discountSumm = 0;
