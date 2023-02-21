@@ -200,4 +200,7 @@ function logoutVisibleEvent() {
         }, 200);
     }, 300);
     localStorage.setItem('isLogin', false)
+    setTimeout(() => {
+        window.location.href="./index.html";
+    }, 600);
 }
